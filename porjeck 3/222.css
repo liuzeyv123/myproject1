@@ -1,8 +1,11 @@
-﻿body{background-color:#68cdd5;margin:0;}
-.box1{width:100vw;height:100%;margin:auto;}/*大盒子，APP界面边框*/
-.top{padding-left:35px;padding-top:20px;}                               /*左上角的箭头*/
-.logo{margin-top:42px;text-align:center;}                               /*logo的居中*/
-.textarea{margin:14%;}                                                   /*中间文本框DIV*/
-span{font-size:26px;color:#FFF;line-height:2em;}                      /*文本内容样式*/
-.bottomleft{margin-left:18.9%;display:inline-block;}                                        /*左下角的按钮图标*/
-.bottomright{margin-right:17.3%;float:right;display:inline-block;}                        /*右下角的按钮图标*/
+body{background-color:#68cdd5;margin:0;}
+.box1{width:100vw;height:100%;margin:auto;}
+.top{padding-left:35px;padding-top:20px;}                               
+.logo{margin-top:42px;text-align:center;}                               
+.textarea{margin:14%;}                                                  
+span{font-size:24px;color:#FFF;line-height:2em;}                     
+.bottomleft{margin-left:18.9%;display:inline-block;text-align:center;font-size:24px;color:#FFF;}                                        
+.bottomright{margin-right:18.9%;float:right;display:inline-block;text-align:center;font-size:24px;color:#FFF;}      
+.buttom{width:100vw;height:125px;margin:0;}
+          
+   
