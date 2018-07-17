@@ -4,8 +4,8 @@ body{background-color:#68cdd5;margin:0;}
 .logo{margin-top:42px;text-align:center;}                               
 .textarea{margin:14%;}                                                  
 span{font-size:24px;color:#FFF;line-height:2em;}                     
-.bottomleft{margin-left:18.9%;display:inline-block;text-align:center;font-size:24px;color:#FFF;}                                        
-.bottomright{margin-right:18.9%;float:right;display:inline-block;text-align:center;font-size:24px;color:#FFF;}      
+.bottomleft{position:relative;left:15%;display:inline-block;text-align:center;font-size:24px;color:#FFF;}                                        
+.bottomright{position:relative;right:15%;float:right;display:inline-block;text-align:center;font-size:24px;color:#FFF;}      
 .buttom{width:100vw;height:125px;margin:0;}
           
    
