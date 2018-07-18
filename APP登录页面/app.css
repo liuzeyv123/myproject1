@@ -1,0 +1,71 @@
+﻿body{margin:0;}
+#APP{
+    background-color:#eff0f4;
+    width:100vw;
+    height:100vh;
+}
+/* app的头部*/
+.top{
+    background-color:#5fc0cd;
+    height:70px;
+    width:100vw;
+    font-size:24px;
+    color:#FFF;
+    text-align: center;
+    line-height:70px;
+}
+/*关闭按钮*/
+.topexit{
+    background-color:#5fc0cd;
+    width:3em;
+    font-size:20px;
+    line-height:35px;
+    color:#FFF;
+    float:left;
+}
+/*注册按钮*/
+.register{
+    background-color:#5fc0cd;
+    width:3em;
+    font-size:20px;
+    line-height:35px;
+    color:#FFF;
+    float:right;
+
+}
+/*app中部，密码和账号输入部分*/
+.box{
+    background-color:#FFF;
+    width:100vw;
+    height:50px;
+    margin-top:10px;
+}
+img{float:left;}
+/*密码账号框*/
+input{
+    float:left;
+    width:70%;
+    margin-top:16px;
+    margin-left:10px;
+    border:none;
+    font-size:1rem;
+    outline:none;
+}
+/*登陆按钮*/
+button{
+    border:none;
+    background-color:#5fc0cd;
+    width:100vw;
+    height:50px;
+    color:#FFF;
+    outline:none;
+	font-size:16px;
+}
+/*右下角忘记密码按钮*/
+a{
+    color:#5fc0cd;
+    float:right;
+    text-decoration:none;
+	line-height:3rem;
+    
+}
