@@ -4,44 +4,53 @@
     width:100vw;
     height:100vh;
 }
-/* app的头部*/
-.top{
+
+/* app的header main 基本设置*/
+header{
+    position:fixed;
+    top:0;
     background-color:#5fc0cd;
-    height:70px;
-    width:100vw;
-    font-size:24px;
-    color:#FFF;
-    text-align: center;
-    line-height:70px;
+    height:50px;
+    width:100%;
+    text-align:center;
 }
-/*关闭按钮*/
-.topexit{
-    background-color:#5fc0cd;
-    width:3em;
-    font-size:20px;
-    line-height:35px;
-    color:#FFF;
-    float:left;
+main{
+    position: absolute;
+    top:50px;
 }
 /*注册按钮*/
 .register{
-    background-color:#5fc0cd;
-    width:3em;
-    font-size:20px;
-    line-height:35px;
     color:#FFF;
-    float:right;
-
+    position:fixed;
+    right:20px;
+}
+/*关闭按钮*/
+.closse{
+    color:#FFF;
+    position:fixed;
+    left:20px;
+}
+/*头部中间的登录二字*/
+span{
+    line-height: 50px;
+    color:#FFF;
+    font-size:24px;
+    position:fixed;
+    left:0;
+    right:0;
+    margin:0 auto;
 }
 /*app中部，密码和账号输入部分*/
+img{float:left;}
 .box{
     background-color:#FFF;
     width:100vw;
     height:50px;
     margin-top:10px;
 }
-img{float:left;}
 /*密码账号框*/
+p{margin-bottom:10px;}
+
 input{
     float:left;
     width:70%;
@@ -52,13 +61,13 @@ input{
     outline:none;
 }
 /*登陆按钮*/
-button{
+.logon{
     border:none;
     background-color:#5fc0cd;
     width:100vw;
     height:50px;
     color:#FFF;
-    outline:none;
+    margin:0;
 	font-size:16px;
 }
 /*右下角忘记密码按钮*/
