@@ -68,13 +68,12 @@ input{
     height:50px;
     color:#FFF;
     margin:0;
-	font-size:16px;
+    font-size:16px;
 }
 /*右下角忘记密码按钮*/
 a{
     color:#5fc0cd;
     float:right;
     text-decoration:none;
-	line-height:3rem;
-    
+    line-height:3rem;
 }
