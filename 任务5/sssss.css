@@ -1,0 +1,156 @@
+body{margin:0;padding:0;}
+/*头部*/
+header{
+    width:100%;
+    height:40px;
+    background-color:#5fc0cd;
+    text-align: center;
+    line-height:40px;
+    font-size:20px;
+    color:#FFF;
+    position:fixed;
+    top:0;
+}
+a{
+    position:fixed;
+    top:0;
+    left:20px;
+    color:#FFF;
+    text-decoration:none;
+    font-size:20px;
+    line-height:40px;
+}
+
+main{
+    margin:40px 0;
+    padding: 0;
+}
+
+
+/*中部轮播图*/
+.top{
+    height:140px;
+    background-image: url(images/task5-1_01.png);
+    -webkit-background-size:cover;
+    background-size:cover;
+    text-align: center;
+}
+.photo>img{
+    width:60px;
+    height:60px;
+    margin:40px 20px;
+    float:left;
+}
+.usertext{
+    display:flex;
+    flex-direction:column;
+    text-align: left;
+ 
+    margin-top:40px;
+    padding-top:40px;
+    font-size: 12px;
+    color: #FFF;
+}
+.name{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.houses {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+
+/*maintext部分*/
+.xinxi{
+    display: flex;
+
+    width:100%;
+    flex-direction:column;
+    font-size: 12px;
+}
+.maintitle{
+    padding:10px;
+    min-height:30px;
+    border-bottom: 1px solid #cccccc;
+    line-height:30px;
+}
+.maintitle>span{
+    padding-left: 2px;
+    border-left:2px solid #5fc0cd ;
+}
+.row{
+        margin:0 10px;
+    padding:5px;
+    min-height:30px;
+    border-bottom: 1px solid #cccccc;
+    line-height:30px;
+}
+.xinxi>span{
+    vertical-align: middle;
+    display:inline-block;
+}
+.fst{
+    display: inline-block;
+    
+   
+    height:100%;
+    line-height: 100%;
+    padding-right:6px;
+    border-right: #ccc 2px solid;
+    color:  #ccc;
+
+}
+.lst1{
+    display: inline-block;
+    position: relative;
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+    
+    
+}
+}
+.red{color: red;}
+.row>img{
+    width: 0.75em;
+    height:0.75em;
+}
+
+
+
+/*footer部分*/
+footer{
+    display:flex;
+    position: fixed;
+    bottom:8px;
+    width: 100%;
+    height:35px;
+    background-color: white;
+}
+.left {
+    width: 100%;
+    height: 35px;
+    background-color: white;
+    border: solid 2px #5fc0cd;
+    border-radius:5px;
+    text-align: center;
+    line-height:35px;
+    color:#5fc0cd;
+    margin: 3px;
+    outline:none;
+
+}
+.right {
+    width: 100%;
+    height: 35px;
+    background-color:#5fc0cd;
+    border: solid 2px #5fc0cd;
+    border-radius:5px;
+    text-align: center;
+    line-height:35px;
+    color:white;
+    margin: 3px;
+    outline:none;
+
+}
+
