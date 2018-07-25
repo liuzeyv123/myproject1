@@ -81,20 +81,17 @@ main{
     border-left:2px solid #5fc0cd ;
 }
 .row{
-        margin:0 10px;
+    margin:0 10px;
     padding:5px;
     min-height:30px;
     border-bottom: 1px solid #cccccc;
     line-height:30px;
+    align-items:center;
+    display: flex;
 }
-.xinxi>span{
-    vertical-align: middle;
-    display:inline-block;
-}
+
 .fst{
-    display: inline-block;
-    
-   
+    min-width: 50px;
     height:100%;
     line-height: 100%;
     padding-right:6px;
@@ -102,18 +99,14 @@ main{
     color:  #ccc;
 
 }
-.lst1{
-    display: inline-block;
-    position: relative;
- /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-    
-    
-}
+.lst{
+    margin-left: 10px;    
 }
 .red{color: red;}
+
 .row>img{
-    width: 0.75em;
-    height:0.75em;
+    width: 1em;
+    height:1em;
 }
 
 
