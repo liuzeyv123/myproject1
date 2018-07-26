@@ -1,0 +1,166 @@
+*{margin:0;padding:0;}
+body{min-width:800px;}
+/*===========header部分===============*/
+.header{
+	width: 100%;
+	height: 100px;
+}
+.header .logo img{
+	width:300px;
+	height:85px;  
+	margin-left: 100px;
+	float:left;
+}
+ul{
+	list-style-type: none;
+	margin: 0 85px 0 20px;
+	height:85px;
+	float:right;		
+	display: flex;
+	align-items: center;
+}
+li{
+	float:left;
+}
+a{
+	text-decoration:none;
+	font-family:微软雅黑;
+	color:#000;
+	float:left;
+	padding:0 20px;
+}
+/*==========container部分===========*/
+.one{
+	background-image: url(image/1.jpeg);
+	background-size: cover;
+	height:600px;
+	text-align: center;
+	line-height:600px;
+}
+
+.one>span{
+	width: 300px;
+	height: 300px;
+	font-family: 微软雅黑;
+	font-size:45px;
+	font-weight:bold;
+	color: #FFF;
+}
+button{
+	margin:0 auto;
+	font-size: 18px;
+	outline: none;
+	color:#FFF;
+	width:200px;
+	height:60px;
+	display: block;
+	position: relative;
+	top: -250px;
+	background-color: #F5704F;
+	border-radius:10px;
+}
+/*==========微博,微信,qq图标部分==========*/
+.two{
+	max-width:1000px;
+	
+	margin:0 auto;
+}
+.tubiao{
+	width:100%;
+	margin:30px 0;
+	display: flex;
+
+}
+.xinlang,
+.weixin,
+.qq{
+	flex:1;
+	text-align: center;
+	justify-content;
+	font-size:20px;
+	font-weight:bold;
+}
+.title1{
+	width: 600px;
+	text-align: center;
+	font-size:25px;
+	color:pink;
+	font-style: italic;
+	margin:30px auto;
+
+}
+.two-bottom{
+	width:100%;
+
+	display: flex;
+
+}
+.left,
+.right,
+.mid{
+	width: 100%;
+	flex:1;
+	margin:0 10px;
+	text-align: center;
+}
+.left{margin-left: 0;}
+.right{margin-right: 0;}
+.shuoming1{
+	font-size: 20px;
+	font-weight:bold;
+}
+.shuoming2{
+	font-size: 18px;
+	font-weight:bold;
+	color:#7c7d7f;
+}
+.left>img,
+.right>img,
+.mid>img{
+	width:100%;
+	height: 230px;
+}
+.three{
+	background-color:#F7F7F7;
+	text-align: center;
+	display: flex;
+	padding-bottom: 80px;
+	justify-content: center;
+}
+p{	
+	text-align: center;
+	display: block;
+	background-color:#F7F7F7;
+	font-family:微软雅黑;
+	color:#9E9E9E;
+	font-size: 25px;
+	font-weight:bold;
+	padding:40px 0;
+
+}
+.leftbox,
+.rightbox{
+	width: 470px;
+	padding:0 20px; 
+}
+.leftbox>img,
+.rightbox>img{
+	width: 100%;
+	height: 380px;
+
+}
+.bottom1{
+	font-size: 15px;
+	text-align: left;
+	font-family: 微软雅黑;
+
+	font-weight: bold;
+}
+.footer{
+	width: 100%;
+	height:80px;
+	background-color: #292C35;
+	color: #FFF;
+	text-align: center;
+	line-height: 80px;
+}
