@@ -5,10 +5,11 @@
 	background-color:#5fc0cd; 
 	position:fixed;
 }
-.header>img{
-	height:40px;
+.img1{
+	width: 38px; height: 40px;
+    background: url('images/css_sprites.png') -71px -110px;
 	position: fixed;
-	padding-top: 15px;
+	margin:10px;
 	right:20px;
 }
 .bot{
@@ -67,7 +68,7 @@ select{
 /*=====================内容======================*/
 .container{
 	width:100%;
-	padding:110px 0;
+	padding:100px 0;
 }
 .text{
 	font-size:16px;
@@ -81,8 +82,8 @@ select{
 }
 
 .text>ul{
-	width:60%;
-	line-height: 30px;
+	width:65%;
+	line-height: 33px;
 	list-style-type: none;
 }
 .text>ul>li{
@@ -94,14 +95,15 @@ select{
 .icon2,
 .icon3{
 	display: inline-block;
-	width:25px;
-	height:30px;
-	background-image:url(images/task5.png);
+	width:24px;
+	height:29px;
+	background-image:url(images/css_sprites.png);
 	vertical-align: middle;
+	
 }
-.icon1{background-position: -4px -7px;}
-.icon2{background-position: -4px -40px;}
-.icon3{background-position: -4px -103px;}
+.icon1{background-position: -129px -110px;}
+.icon2{background-position: 4px 5px;}
+.icon3{background-position:  -171px -9px;}
 
 .spend{
 	margin-right: 5px;
@@ -109,12 +111,17 @@ select{
 	color:red;
 	line-height:100px;
 }
-.spend>img{height:25px;}
+.img2{
+	float: right;
+	margin:38px 0;
+	width: 14px; height: 24px;
+    background: url('images/css_sprites.png') -174px -53px;
+}
 .name1,.name3{color:#999;}
 
 /**/
 .footer{
-	height:60px;
+	height:80px;
 	width:100%;
 	border-top: 1px solid #dbe5e7;
 	background-color:#f8fafb;
@@ -124,8 +131,31 @@ select{
 	position: fixed;
 	bottom:0;
 }
-.footer>div>a>img{
-	height:60px;
+.footermid{
+	height:80px;
+}
+
+.img3{
+	margin:0 auto; 
+ 	width: 46px; height: 40px;
+    background: url('images/css_sprites.png') -108px -10px;
+
+}
+.img4{
+	margin:0 auto; 
+	width: 78px; height: 80px;
+    background: url('images/css_sprites.png') -10px -10px;
+}
+.img5{
+	margin:0 auto; 
+	width: 41px; height: 40px;
+    background: url('images/css_sprites.png') -10px -110px;
+}
+p{	
+	margin: 0;
+	font-size: 16px;
+	color: #5fc0cd;
+	font-weight: bold;
 }
 .footer>div{
 	flex:1;
