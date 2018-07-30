@@ -119,27 +119,33 @@ select{
 }
 .name1,.name3{color:#999;}
 
-/**/
+/*底部*/
 .footer{
-	height:80px;
-	width:100%;
-	border-top: 1px solid #dbe5e7;
+	width: 100%;
+	height: 80px;
 	background-color:#f8fafb;
-	display:flex;
-	justify-content:center;
+	display: flex;
 	align-items: center;
+	justify-content: space-around;
 	position: fixed;
 	bottom:0;
 }
-.footermid{
-	height:80px;
-}
 
+button{
+	width:120px;
+	height: 80px;
+	text-align: center;
+	font-size: 18px;
+	background-color: #f8fafb;
+	border:none;
+	color:#5fc0cd;
+	font-weight: bold;
+}
+	
 .img3{
 	margin:0 auto; 
  	width: 46px; height: 40px;
-    background: url('images/css_sprites.png') -108px -10px;
-
+   	background: url('images/css_sprites.png') -108px -10px;
 }
 .img4{
 	margin:0 auto; 
@@ -150,14 +156,4 @@ select{
 	margin:0 auto; 
 	width: 41px; height: 40px;
     background: url('images/css_sprites.png') -10px -110px;
-}
-p{	
-	margin: 0;
-	font-size: 16px;
-	color: #5fc0cd;
-	font-weight: bold;
-}
-.footer>div{
-	flex:1;
-	text-align:center;
 }
