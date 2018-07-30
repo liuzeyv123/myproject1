@@ -6,10 +6,10 @@
 	position:fixed;
 }
 .img1{
-	width: 38px; height: 40px;
-    background: url('images/css_sprites.png') -71px -110px;
+ 	width: 29px; height: 30px;
+    background: url(images/css_sprites.png) -66px -100px;
 	position: fixed;
-	margin:10px;
+	margin:15px;
 	right:20px;
 }
 .bot{
@@ -95,15 +95,15 @@ select{
 .icon2,
 .icon3{
 	display: inline-block;
-	width:24px;
+	width:30px;
 	height:29px;
 	background-image:url(images/css_sprites.png);
 	vertical-align: middle;
 	
 }
-.icon1{background-position: -129px -110px;}
-.icon2{background-position: 4px 5px;}
-.icon3{background-position:  -171px -9px;}
+.icon1{background-position: -158px -10px;}
+.icon2{background-position: 8px 10px;}
+.icon3{background-position:  -155px -54px;}
 
 .spend{
 	margin-right: 5px;
@@ -115,14 +115,14 @@ select{
 	float: right;
 	margin:38px 0;
 	width: 14px; height: 24px;
-    background: url('images/css_sprites.png') -174px -53px;
+    background: url('images/css_sprites.png') -158px -97px;
 }
 .name1,.name3{color:#999;}
 
 /*底部*/
 .footer{
 	width: 100%;
-	height: 80px;
+	height: 70px;
 	background-color:#f8fafb;
 	display: flex;
 	align-items: center;
@@ -133,7 +133,7 @@ select{
 
 button{
 	width:120px;
-	height: 80px;
+	height: 70px;
 	text-align: center;
 	font-size: 18px;
 	background-color: #f8fafb;
@@ -144,16 +144,16 @@ button{
 	
 .img3{
 	margin:0 auto; 
- 	width: 46px; height: 40px;
-   	background: url('images/css_sprites.png') -108px -10px;
+ 	width: 40px; height: 35px;
+    background: url('images/css_sprites.png') -98px -10px;
 }
 .img4{
 	margin:0 auto; 
-	width: 78px; height: 80px;
+	width: 68px; height: 70px;
     background: url('images/css_sprites.png') -10px -10px;
 }
 .img5{
 	margin:0 auto; 
-	width: 41px; height: 40px;
-    background: url('images/css_sprites.png') -10px -110px;
+	width: 36px; height: 35px;
+    background: url('images/css_sprites.png') -10px -100px;
 }
