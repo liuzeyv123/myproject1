@@ -10,7 +10,7 @@
     background: url(images/css_sprites.png) -66px -100px;
 	position: fixed;
 	margin:15px;
-	right:20px;
+	right:15px;
 }
 .bot{
 	width: 220px;
@@ -73,7 +73,7 @@ select{
 .text{
 	font-size:16px;
 	width:100%;
-	height: 100px;
+	height: 120px;
 	padding-left:10px;
 	display: flex;
 	justify-content:space-between;
@@ -82,8 +82,9 @@ select{
 }
 
 .text>ul{
+	margin:16px 0 0; 
 	width:65%;
-	line-height: 33px;
+	line-height: 30px;
 	list-style-type: none;
 }
 .text>ul>li{
@@ -101,21 +102,21 @@ select{
 	vertical-align: middle;
 	
 }
-.icon1{background-position: -158px -10px;}
+.icon1{background-position: -115px -100px;}
 .icon2{background-position: 8px 10px;}
-.icon3{background-position:  -155px -54px;}
+.icon3{background-position:  -158px -10px;}
 
 .spend{
-	margin-right: 5px;
+	margin-right: 15px;
 	font-size: 16px;
 	color:red;
-	line-height:100px;
+	line-height:120px;
 }
 .img2{
 	float: right;
-	margin:38px 0;
+	margin:48px 0 0 5px;
 	width: 14px; height: 24px;
-    background: url('images/css_sprites.png') -158px -97px;
+    background: url('images/css_sprites.png') -160px -53px;
 }
 .name1,.name3{color:#999;}
 
@@ -145,11 +146,11 @@ button{
 .img3{
 	margin:0 auto; 
  	width: 40px; height: 35px;
-    background: url('images/css_sprites.png') -98px -10px;
+    background: url('images/css_sprites.png') -100px -10px;
 }
 .img4{
 	margin:0 auto; 
-	width: 68px; height: 70px;
+	width: 70px; height: 70px;
     background: url('images/css_sprites.png') -10px -10px;
 }
 .img5{
@@ -157,3 +158,4 @@ button{
 	width: 36px; height: 35px;
     background: url('images/css_sprites.png') -10px -100px;
 }
+.three{color:#999;}
