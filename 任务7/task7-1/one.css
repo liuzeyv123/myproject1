@@ -1,0 +1,118 @@
+*{margin: 0;padding: 0;}
+body{
+	background-color: #f0f0f0;
+}
+.header{
+	width:100%;
+	height:60px;
+	background-color:#69d1e9;
+	top:0;
+	position: fixed;
+	z-index: 2;
+
+}
+.img1{
+	width: 34px; height: 27px;
+    background: url('css_sprites.png') -102px -10px;
+    transform: scale(0.8);
+    position: absolute;
+    top:20px;left:23px;
+    z-index: 1;
+}
+.container{
+	width:80%;
+	margin:80px auto 0 auto;
+	
+}
+.lastgame{
+	
+	width:100%;
+	height: 80px;
+	border:1px solid #c9c9c9;
+	background-color: #FFF;
+	font-size: 25px;
+	text-align: center;
+	line-height: 80px;
+	font-weight:bold;
+  	font-family: "HiraginoSansGB";
+	color:#9a9a9a;	
+}
+.img2{ 
+	width: 24px; height: 40px;
+    background: url('css_sprites.png') -58px -10px;
+    transform: scale(0.7);
+    position: relative;
+    float: right;
+    top:-61px;
+    right: 20px;
+}
+.gamechoose{
+	width: 80%;
+	
+	margin:20px auto 0 auto;
+	text-align: center;
+	background-color: #FFF;
+	border: 1px solid #c9c9c9;
+}
+.gamename{
+	width:100%;
+	height: 60px;
+	font-size: 25px;
+	line-height: 60px;
+	font-family: "HiraginoSansGB";
+	color:#fbb435;
+	border-bottom:1px solid #fbb435;
+}
+.choose1,
+.choose2,
+.choose3{
+	display: block;
+	width: 75%;
+	height: 80px;
+	border:none;
+	background-color: #69d1e9;
+	border-radius: 5px;
+	margin: 20px auto;
+	color:#FFF;
+	font-size: 25px;
+	line-height: 80px;
+
+}
+span{
+	color:#9a9a9a;
+	font-family: "HiraginoSansGB";
+}
+.img3{
+	width: 28px; height: 56px;
+    background: url('css_sprites.png') -10px -10px;
+    transform: scale(0.8);
+    position: relative;
+    float: right;
+    top:-225px;
+    margin-right: 5px; 
+   
+
+}
+.radius{
+	
+	width: 80%;
+	height: 15px;
+	margin: 10px auto;
+	display: flex;
+	align-items:;
+	justify-content:center;
+}
+.rad1{
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	background-color: #69d1e9;
+	border-radius: 15px;
+}
+.rad2{
+	margin: 0 5px;
+	width: 15px;
+	height: 15px;
+	background-color:#f0f0f0;
+	border-radius: 15px;
+}
