@@ -43,7 +43,7 @@ body{background-color:#29bde0 ;}
 audio{
 	position: absolute;
 	top:70px;
-	right:-270px;
+	right:-268px;
 	transform:scale(1.1); 
 	z-index: 1;
 }
