@@ -86,20 +86,19 @@ span{
 	width: 28px; height: 56px;
     background: url('css_sprites.png') -10px -10px;
     transform: scale(0.8);
-    position: relative;
-    float: right;
-    top:-225px;
-    margin-right: 5px; 
+    
+    position: absolute;
+ 	right: 11%;
+ 	top: 410px
    
 
 }
 .radius{
-	
 	width: 80%;
 	height: 15px;
 	margin: 10px auto;
 	display: flex;
-	align-items:;
+	align-items:center;
 	justify-content:center;
 }
 .rad1{
