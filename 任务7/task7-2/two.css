@@ -12,7 +12,7 @@ body{background-color:#29bde0 ;}
 	line-height: 60px;
 	position: fixed;
 	top:0;
-	z-index: 3;
+	z-index: 4;
 }
 .img1{
 	width: 39px; height: 40px;
@@ -40,6 +40,11 @@ body{background-color:#29bde0 ;}
 	font-size: 16px;
 	line-height: 50px;
 }
+.mid>span{
+	display: block;
+	position: absolute;
+	z-index: 3;
+}
 audio{
 	position: absolute;
 	top:70px;
@@ -66,7 +71,7 @@ audio{
 	top:58px;
 	right:-10px;
 	pointer-events: none;
-	z-index: 2;
+	z-index: 3;
 }
 .sanjiaoxing{
 	width:	0;
