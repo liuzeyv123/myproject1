@@ -48,9 +48,8 @@ body{background-color:#29bde0 ;}
 audio{
 	position: absolute;
 	top:70px;
-	right:11px;
-	transform:scale(1.1); 
-	transform: rotate(180deg);
+	right:-6px;
+	transform:scale(0.9) rotate(180deg); 
 	z-index: 1;
 }
 .notv{
@@ -61,6 +60,7 @@ audio{
 	background-color: #b9e9f5;
 	right: 45px;
 	z-index: 2;
+	
 }
 .img3{
 	width: 65px; height: 57px;
