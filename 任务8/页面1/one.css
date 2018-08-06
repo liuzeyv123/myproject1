@@ -160,8 +160,17 @@ span{
 	font-size: 20px;
 	font-weight: bold;
 }
+.two{display: flex;flex-wrap: wrap;justify-content: center;}
+
+@media all and ( max-width:1200px ){
+	.two{width: 780px;margin:0 auto;}
+}
+
+@media all and ( max-width: 780px){
+	.two{width:300px;margin: 0 auto;}
+}
 .midtwo{
-	width:380px;
+	width:300px;
 	height: 70px;padding:0;}
 .box1{
 	width:292.5px;
@@ -302,6 +311,7 @@ a:hover .intro{
 .w5:hover{
 	border:1px solid #e2e2e2;
 }
+
 @media all and (max-width:991px){
 	.w5{
 	width:100%;
@@ -313,7 +323,7 @@ a:hover .intro{
 	align-items: center;
 	padding: 0;
 }
-.img8{right:50px;}
+.img8{right:10px;}
 .midone{text-align: center;}
 }
 /*==================footer==================*/
