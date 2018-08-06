@@ -267,7 +267,7 @@ ul>a:hover li{color: red;}
 		position: absolute;
 		display: none;
 		background-color: #000;
-		opacity:0.5;
+		opacity:0.75;
 		z-index: 5;
 		color: #FFF;
 		vertical-align: middle;
