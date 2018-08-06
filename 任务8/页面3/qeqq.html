@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<style   type="text/css">
+	*{padding:0;font-family: "Microsoft YaHei";}
+	.user{
+		width: 300px;
+		height: 468px;
+		border:1px solid #eeeded;
+		font-size:14px;
+	}
+	.usertop{
+		width: 100%;
+		display: flex;
+		border:1px solid #eeeded
+	}
+	.imguser{
+		width: 138px; height: 140px;
+    	background: url('css_sprites2.png') -10px -10px;
+    	margin:15px 5px; 
+	}
+	.usertext{width: 60%;}
+
+	.imguser1{
+		 width: 16px; height: 15px;
+   		 background: url('css_sprites2.png') -168px -10px;
+	}
+	.usermid{
+		height: 120px;
+		display: flex;
+		flex-wrap:wrap; 	
+	}
+	.usermid-one{
+		width: 50%; 
+		display: flex;
+		border:1px solid #eeeded;
+		box-sizing: border-box;
+		align-items: center;		
+	}
+	.huise{color:#999}
+	.red{color: red;}
+	.money{display: flex;}
+	.usermid2{
+		width:40%;
+		height: 120px;
+		text-align: center;
+		line-height: 120px;
+		border:1px solid #eeeded;
+		box-sizing: border-box;
+	}
+	.usermid3{
+		width:60%;
+		height: 120px;
+		border:1px solid #eeeded;
+		box-sizing: border-box;
+	}
+	.usermid2-1{
+		width: 100%;
+		height: 40px;
+		display: flex;
+		line-height: 40px;
+		justify-content: space-between;
+		border-top:1px solid #eeeded;
+	}
+	.topno{
+		border-top:none; 
+	}
+	.lft{margin-left: 20px;}
+	.rig{margin-right: 5px;}
+	.bt1{
+		height: 30px;
+		font-size: 18px;
+		font-weight: bold;
+		line-height:30px;
+		padding-left: 5px;
+		border-bottom:1px solid #eeeded; 
+	}
+	.warn{
+		height: 25px;
+		line-height: 25px;
+		padding-left: 5px;
+		color: #999;
+	}
+	.zhe{
+		width:300px;
+		height: 468px;	
+		position: absolute;
+		display: none;
+		background-color: #000;
+		opacity:0.5;
+		z-index: 5;
+		color: #FFF;
+		vertical-align: middle;
+	}
+	.zhe1{
+		font-size: 16px;
+		padding: 120px 20px;
+	}
+	.title1{
+		width: 100%;
+		font-size: 20px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.user:hover .zhe{
+		display: block;
+		}
+	/*.user{transform: scale(0.7);
+		margin-left: -60px;
+		}*/
+</style>
+</head>
+<body>
+ 		
+	<div class="user">
+			<div class="zhe">
+                <div class="zhe1">
+                	<div class="title1">ios工程师</div>
+                	&nbsp;&nbsp;iphone工程师是移动应用开发者，希望将自己的应用移植到该iphone平台上或者在该平台上开发应用。主要分为：iPhone App研发工程师，iPhone App 测试工程师，iPhone App 产品策划，iPhone App 产品经理/助理，iPhone App UI设计师，iPhone App 产品运营管理
+            	</div>               
+            </div>
+			<div class="usertop">
+				<div class="imguser"></div>
+				<div class="usertext">
+					<h4>web前端工程师</h4>
+					<p>web前端开发工程师,主要职责是利用(X)HTML/ CSS/ JavaScript/flash等各种Web计数进行产品的开发.</p>
+				</div>
+			</div>
+
+			<div class="usermid">
+				<div class="usermid-one">
+					&nbsp;&nbsp;<span class="huise">门槛</span>&nbsp;&nbsp;
+					<div class="imguser1"></div>&nbsp;&nbsp;
+				</div>
+				<div class="usermid-one">
+					&nbsp;&nbsp;<span class="huise">难易程度</span>&nbsp;&nbsp;
+					<div class="imguser1"></div>&nbsp;&nbsp;
+					<div class="imguser1"></div>&nbsp;&nbsp;
+				</div>
+				<div class="usermid-one">
+					&nbsp;&nbsp;<span class="huise">成长周期</span>&nbsp;&nbsp;<span class="red">1-3</span>年
+				</div>
+				<div class="usermid-one">
+					&nbsp;&nbsp;<span class="huise">稀缺程度</span>&nbsp;&nbsp;<span class="red">345</span>家公司<br/>需要
+				</div>
+			</div>
+			<div class="money">
+			<div class="usermid2"><span class="huise">薪金待遇</span></div>
+				<div class="usermid3">
+					<div class="usermid2-1 topno">
+						<div class="lft">0-1年</div>
+						<div class="rig">5K-8K/月</div>
+					</div>
+					<div class="usermid2-1">
+						<div class="lft">1-3年</div>
+						<div class="rig">8K-14K/月</div>
+					</div>
+					<div class="usermid2-1">
+						<div class="lft">3-5年</div>
+						<div class="rig">14K-18K/月</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom">
+				<div class="bt1">有<span class="red">286</span>正在学</div>
+				<div class="warn">提示:在你学习之前你应该掌握XX,XXX语言基础</div>
+			</div>
+	</div>
+</div>
+</body>
+</html>
