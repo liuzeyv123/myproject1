@@ -251,6 +251,7 @@ body{background-color: #fafafa; overflow-x:hidden; }
 		padding-left: 5px;
 		color: #999;
 	}
+	.yincang{visibility: hidden;}
 	.zhe{
 		width:300px;
 		height: 468px;	
@@ -395,5 +396,5 @@ body{background-color: #fafafa; overflow-x:hidden; }
 		justify-content:center;
 	}
 	.box2{margin: 0;}
-
+	.yincang{display: none;}
 }
