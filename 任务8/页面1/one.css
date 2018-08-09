@@ -105,6 +105,7 @@ a{color:#000;text-decoration:none;}
 /*=================container部分==============*/
 .container{
 	margin:100px auto;
+	max-width: 1200px;
 	padding: 0;
 }
 .midone{
@@ -328,9 +329,10 @@ a:hover .intro{
 }
 
 @media all and (max-width:991px){
+	.w5out{background-color:transparent;}
 	.w5{
-	width:100%;
-	margin-top:10px; 
+	width:95%;
+	margin:10px 2.5% 0 2.5%; 
 	height: 200px;
 	background-color: #fff;
 	display: flex;
@@ -341,7 +343,9 @@ a:hover .intro{
 .last{border:none;}
 .img8{right:10px;}
 .midone{text-align: center;}
+.three{margin-bottom: 20px;}
 }
+
 /*==================footer==================*/
 .footer{
 	width:100%;

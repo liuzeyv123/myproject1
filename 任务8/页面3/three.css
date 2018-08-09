@@ -49,13 +49,13 @@ body{background-color: #fafafa; overflow-x:hidden; }
 	width: 100%;
 
 	margin: 0 ;
-	margin-bottom: 50px !important;
+	margin-bottom: 30px !important;
 	padding: 0 calc(5% - 10px);
 	background-color:#29b078;
 	float: right;
 
 }
-.containar-main ul{margin-top: 25px !important;}
+
 .navbar{
 	width: 100%;
 	min-height: 85px;
@@ -111,8 +111,8 @@ body{background-color: #fafafa; overflow-x:hidden; }
 }
 
 .containar-main{
-
 	width: 80%;
+	max-width: 1200px;
 	text-align: left;
 	font-size: 18px;
 	margin:0 auto;
@@ -130,15 +130,20 @@ body{background-color: #fafafa; overflow-x:hidden; }
 	border-bottom: 1px solid #d0d6d9;
 }
 .container ul{
+	height: 60px;
+	margin-top: 10px;
 	list-style-type: none;
 	color: #999;
 	display: flex;
-	height: 60px;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .container li{
 	margin-left: 20px;
 }
+
+.containar ul li{width: 72px;}
+.containar ul li:nth-child(1){width: 40px;}
 .container a{
 	color: #000;
 }
@@ -159,20 +164,29 @@ body{background-color: #fafafa; overflow-x:hidden; }
 	justify-content: space-between;
 	flex-wrap:wrap;
 }
+@media all and (max-width: 750px){
+	.user{margin: 0 auto;}
+}
 @media all and (max-width:396px){
 	.list{
 	height: 150px;
 	}
-	.container ul{
-	height: 150px;
-	}
+	
 }
-
+@media all and (max-width: 375px){
+		.containar-main{
+			width: 95% ;
+			margin: 0 2.5%;
+		}
+		.user{margin: 0 auto;}
+	}
 /*任务介绍*/
 	.user{
-		width: 300px;
+		width:300px;
 		height: 468px;
 		border:1px solid #eeeded;
+		border-radius: 2px;
+		background-color: #fff;
 		font-size:14px;
 		margin-bottom: 20px;
 	}
@@ -210,6 +224,7 @@ body{background-color: #fafafa; overflow-x:hidden; }
 	.huise{color:#999}
 	.red{color: red;}
 	.money{display: flex;}
+	.bottom{border: 1px solid #eeeded;border-bottom: none;}
 	.usermid2{
 		width:40%;
 		height: 120px;
@@ -251,7 +266,7 @@ body{background-color: #fafafa; overflow-x:hidden; }
 		padding-left: 5px;
 		color: #999;
 	}
-	.yincang{visibility: hidden;}
+	.yincang,.yincang2{visibility: hidden;}
 	.zhe{
 		width:300px;
 		height: 468px;	
@@ -279,6 +294,9 @@ body{background-color: #fafafa; overflow-x:hidden; }
 	@media all and (min-width: 1400px){
 		.user{width: 350px;}
 		.zhe{width: 350px;}
+	}
+	@media all and (max-width:1125px){
+		.yincang2{display: none;}
 	}
 /*==================footer==================*/
 
