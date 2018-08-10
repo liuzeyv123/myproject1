@@ -1,15 +1,29 @@
 *{letter-spacing:1px; padding:0;font-family: "Microsoft YaHei";}
-body{background-color: #fafafa; overflow-x:hidden; max-width:1200px;margin:0 auto;}
+body{background-color: #fafafa; overflow-x:hidden;}
 P{text-indent: 2em;}
 
 .carousel-indicators{ width: 50px;margin: 10px 0 0 -20px;}
+.header{background-color: #fff;padding:0 10%;}
 .headertop{
 	width: 100%;
+	max-width: 1200px;
 	margin: 0 auto;
 	height: 35px;
-	padding: 0 10%;
 	background-color: #FFF;
 }
+
+@media all and (min-width: 1200px){
+	.headertop{padding: 0 ;}
+	.navbar{
+		max-width:1200px;
+		float: none !important;
+		margin: 0 auto !important ;
+	}
+	#shownav{padding-right:0 !important;}
+
+}
+
+
 .phone{
 	font-size: 14px;
 	color:#29b078;
@@ -47,9 +61,8 @@ P{text-indent: 2em;}
 }
 .headermiddle{
 	width: 100%;
-
-	margin: 0 auto;
-	padding: 0 calc(5% - 10px);
+	margin: 0;
+	padding: 0 10%;
 	background-color:#29b078;
 	float: right;
 
@@ -71,7 +84,7 @@ P{text-indent: 2em;}
 	font-size: 20px;
 	border-top: none;
 	float: right;
-	padding-right: 90px;
+	
 }
 #shownav li a{height: 85px;color: #fff;line-height: 55px;}
 #shownav li a:hover{border-bottom: 2px solid #FFF;}
@@ -80,7 +93,7 @@ P{text-indent: 2em;}
 	width:113px ;height: 54px;
 	background:url("01.png") no-repeat;
 	float: left;
-	margin:16px 0 0 6%;
+	margin:16px 0 0 0;
 }
 @media all and (max-width: 462px){
 	.img0{margin:16px 0 0 0;}
@@ -253,6 +266,7 @@ p{margin-bottom: 40px;}
 .back{
 	display: flex;
 	width:80%;
+	max-width: 1200px;
 	margin: 0 auto;
 	
 }
