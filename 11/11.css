@@ -6,11 +6,10 @@ a {
   text-decoration: none; }
 
 .header {
-  width: 95%;
+  width: 100%;
   height: 50px;
   display: flex;
-  justify-content: space-between;
-  padding: 0 2.5%;
+  justify-content: center;
   margin-bottom: 15px;
   line-height: 50px;
   background-color: #5fc0cd; }
@@ -25,6 +24,12 @@ a {
     .header .login a,
     .header .register a {
       color: #fff; }
+  .header .close {
+    position: absolute;
+    left: 2%; }
+  .header .register {
+    position: absolute;
+    right: 2%; }
   .header .login {
     font-size: 22px; }
 
@@ -89,4 +94,4 @@ a {
     color: #5fc0cd;
     margin-right: 10px; }
 
-/*# sourceMappingURL=qweqwe.css.map */
+/*# sourceMappingURL=11.css.map */

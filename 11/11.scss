@@ -26,11 +26,11 @@ $border:2px solid #eaedee;
 }
 // ============================
 .header{ 
-	width:95%;
+	width:100%;
 	height:$header;
 	display:flex;
-	justify-content:space-between;
-	padding:0 2.5%;
+	justify-content:center;
+	
 	margin-bottom:15px;
 	line-height:$header;
 	background-color:$background-color1;
@@ -39,6 +39,14 @@ $border:2px solid #eaedee;
 	.register{
 		@include font;
 		font-size:$size;
+	}
+	.close{
+		position:absolute;
+		left:2%;
+	}
+	.register{
+		position:absolute;
+		right:2%;
 	}
 	.login{font-size:$size+4px;}
 }
