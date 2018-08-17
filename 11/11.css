@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background: #eff0f4; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  width: 95%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5%;
+  margin-bottom: 15px;
+  line-height: 50px;
+  background-color: #5fc0cd; }
+  .header .close,
+  .header .login,
+  .header .register {
+    color: #fff;
+    font-family: "STHeitiSC";
+    font-weight: bold;
+    font-size: 18px; }
+    .header .close a,
+    .header .login a,
+    .header .register a {
+      color: #fff; }
+  .header .login {
+    font-size: 22px; }
+
+.container {
+  width: 100%;
+  margin-bottom: 15px; }
+  .container .phone {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 55px; }
+    .container .phone .img1 {
+      width: 29px;
+      height: 41px;
+      border-right: 2px solid #eaedee;
+      padding-right: 17px;
+      margin-left: 13px;
+      background: url("css_sprites.png") -59px -10px;
+      transform: scale(0.8); }
+    .container .phone input {
+      font-size: 16px;
+      border: none;
+      outline: none; }
+  .container .password {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 55px; }
+    .container .password .img2 {
+      width: 29px;
+      height: 43px;
+      border-right: 2px solid #eaedee;
+      padding-right: 17px;
+      margin-left: 13px;
+      background: url("css_sprites.png") -10px -10px;
+      transform: scale(0.8); }
+    .container .password input {
+      font-size: 16px;
+      border: none;
+      outline: none; }
+
+.footer {
+  width: 100%; }
+  .footer button {
+    width: 100%;
+    height: 50px;
+    background-color: #5fc0cd;
+    border: none;
+    ontline: none;
+    color: #fff;
+    font-family: "STHeitiSC";
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 10px; }
+    .footer button a {
+      color: #fff; }
+  .footer a {
+    float: right;
+    color: #5fc0cd;
+    margin-right: 10px; }
+
+/*# sourceMappingURL=qweqwe.css.map */
