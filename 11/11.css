@@ -10,6 +10,8 @@ a {
   height: 50px;
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
   margin-bottom: 15px;
   line-height: 50px;
   background-color: #5fc0cd; }
@@ -35,7 +37,8 @@ a {
 
 .container {
   width: 100%;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: 65px; }
   .container .phone {
     width: 100%;
     margin-bottom: 15px;

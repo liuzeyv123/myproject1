@@ -30,7 +30,8 @@ $border:2px solid #eaedee;
 	height:$header;
 	display:flex;
 	justify-content:center;
-	
+	position:fixed;
+	top:0;
 	margin-bottom:15px;
 	line-height:$header;
 	background-color:$background-color1;
@@ -53,6 +54,7 @@ $border:2px solid #eaedee;
 .container{
 	width:100%;
 	margin-bottom:15px;
+	margin-top:$header+15px;
 	.phone{
 		width:100%;
 		margin-bottom:15px;
