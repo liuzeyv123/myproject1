@@ -1,0 +1,127 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0; }
+
+header {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: #5fc0cd; }
+  header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    position: fixed;
+    left: 25px; }
+  header span {
+    font-size: 20px;
+    color: #fff;
+    font-family: "Microsoft YaHei"; }
+
+.container {
+  margin-top: 40px;
+  margin-bottom: 70px; }
+  .container .img2 {
+    height: 150px;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    background: url("task5-1_01.png") no-repeat;
+    background-size: cover; }
+  .container .img3 {
+    width: 169px;
+    height: 169px;
+    background: url("css_sprites.png") -10px -10px;
+    transform: scale(0.5);
+    position: absolute;
+    left: -10px; }
+  .container .container-right {
+    margin-left: 130px;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Microsoft YaHei"; }
+  .container .right-bottom {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px; }
+    .container .right-bottom .img4 {
+      width: 18px;
+      height: 23px;
+      background: url("css_sprites.png") -199px -108px;
+      transform: scale(0.8); }
+  .container .container-botton .one {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    line-height: 50px; }
+    .container .container-botton .one span {
+      margin-left: 20px;
+      padding-left: 5px;
+      border-left: 2px solid #5fc0cd; }
+  .container .container-botton .row {
+    width: 98%;
+    margin-left: 1%;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    border-bottom: 1px solid #ccc; }
+    .container .container-botton .row .fst {
+      min-width: 80px;
+      height: 20px;
+      color: #999;
+      text-align: center;
+      border-right: 1px solid #ccc;
+      line-height: 20px; }
+    .container .container-botton .row .lst {
+      margin: 5px 0 5px 10px; }
+    .container .container-botton .row .red {
+      color: red; }
+  .container .container-botton .img5 {
+    width: 25px;
+    height: 23px;
+    background: url("css_sprites.png") -199px -65px;
+    transform: scale(0.7); }
+
+footer {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff; }
+  footer .left {
+    width: 45%;
+    height: 45px;
+    margin: 2.5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    color: #5fc0cd;
+    border: 2px solid #5fc0cd;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer; }
+  footer .right {
+    width: 45%;
+    height: 45px;
+    margin: 2.5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #5fc0cd;
+    color: #fff;
+    border: 2px solid #5fc0cd;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer; }
+
+/*# sourceMappingURL=12.css.map */

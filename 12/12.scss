@@ -1,0 +1,142 @@
+body{background-color:#fff;margin:0;padding:0;}
+$background-color:#5fc0cd;
+$row-height:50px;
+$font-size:16px;
+$border: 1px solid #ccc;
+@mixin font($font,$color){
+	font-size:$font;
+	color:$color;
+	font-family:"Microsoft YaHei";
+}
+@mixin a{
+	color:#fff;
+	text-decoration:none;
+}
+@mixin button($background-color,$color,$border-color){
+	background-color:$background-color;
+	color:$color;
+	border:2px solid $border-color;
+	border-radius:8px;
+	outline:none;
+}
+// =====================================================
+header{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	position:fixed;
+	top:0;
+	z-index:5;
+	background-color:$background-color;
+	a{
+		@include a;
+		@include font(20px,#fff);
+		position:fixed;
+		left:25px;
+	}
+	span{@include font(20px,#fff);}
+}
+.container{
+	margin-top:40px;
+	margin-bottom:70px;
+	.img2{
+		height:150px;
+		align-items:center;
+		justify-content:flex-start;
+		display:flex;
+		background:url("task5-1_01.png") no-repeat;
+		background-size:cover;
+	}
+	.img3{
+		width: 169px; height: 169px;
+	    background: url('css_sprites.png') -10px -10px;
+		transform:scale(0.5);
+		position:absolute;
+		left:-10px;
+	}
+	.container-right{
+		margin-left:130px;
+		@include font(18px,#fff);
+	}
+	.right-bottom{
+		display:flex;
+		align-items:center;
+		font-size:$font-size - 2px;
+		margin-top:10px;
+		.img4{
+			width: 18px; height: 23px;
+            background: url('css_sprites.png') -199px -108px;
+            transform:scale(0.8);
+        }
+
+	}
+	.container-botton{
+		.one{
+			width:100%;
+		
+			border-bottom:$border;
+			line-height:$row-height;
+			span{
+				margin-left:20px;
+				padding-left:5px;
+				border-left:2px solid $background-color;
+			}
+		}
+		.row{
+			width:98%;
+			margin-left:1%;
+			display:flex;
+			align-items:center;
+			min-height:$row-height;
+			border-bottom:$border;	
+			.fst{
+				min-width:80px;
+				height:20px;
+				color:#999;
+				text-align:center;
+				border-right:$border;
+				line-height:20px;
+			}	
+			.lst{
+				margin: 5px 0 5px 10px;
+			}
+			.red{color:red;}
+
+		}
+		.img5{
+			width: 25px; height: 23px;
+    		background: url('css_sprites.png') -199px -65px;
+    		transform:scale(0.7);
+		}
+	}
+}
+footer{
+	width:100%;
+	height:55px;
+	display:flex;
+	justify-content:space-around;
+	position:fixed;
+	bottom:0;
+	background-color:#fff;
+	.left{
+		width:45%;
+		height:45px;	
+		margin:2.5px 5px;
+		font-size:$font-size+2px;
+		font-weight:bold;
+		@include button(#fff,#5fc0cd,#5fc0cd);
+		cursor:pointer;
+	}
+	.right{
+		width:45%;
+		height:45px;
+		margin:2.5px 5px;
+		font-size:$font-size+2px;
+		font-weight:bold;
+		@include button(#5fc0cd,#fff,#5fc0cd);
+		cursor:pointer;
+	}
+}

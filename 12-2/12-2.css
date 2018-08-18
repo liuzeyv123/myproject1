@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fc0cd;
+  position: fixed;
+  top: 0;
+  z-index: 5; }
+  .header button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #55a8b3;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer; }
+  .header .bu1 {
+    color: #5fc0cd;
+    background-color: #FFF;
+    position: relative;
+    left: 15px; }
+  .header .img1 {
+    width: 29px;
+    height: 30px;
+    background: url(images/css_sprites.png) -66px -100px;
+    position: fixed;
+    right: 15px;
+    top: 15px; }
+
+.select1 {
+  margin-top: 60px;
+  display: flex; }
+  .select1 select {
+    flex: 1;
+    height: 40px;
+    font-size: 16px;
+    text-align-last: center;
+    border-color: #e1e5e7;
+    background: url(images/jiantou.png) #FFF no-repeat;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-position: 98% center; }
+
+.text {
+  width: 100%;
+  height: 90px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between; }
+  .text ul {
+    max-width: calc(100% - 170px);
+    padding-left: 10px; }
+    .text ul li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+      .text ul li .icon1,
+      .text ul li .icon2,
+      .text ul li .icon3 {
+        display: inline-block;
+        width: 30px;
+        height: 27px;
+        background-image: url(images/css_sprites.png);
+        transform: scale(0.8);
+        vertical-align: middle; }
+      .text ul li .icon1 {
+        background-position: -115px -101px; }
+      .text ul li .icon2 {
+        height: 20px;
+        background-position: 8px 10px; }
+      .text ul li .icon3 {
+        background-position: -158px -11px; }
+    .text ul .name1,
+    .text ul .name3 {
+      color: #999; }
+
+.spend {
+  color: red;
+  position: relative;
+  right: 0;
+  min-width: 120px; }
+  .spend .img2 {
+    width: 14px;
+    height: 24px;
+    background: url("images/css_sprites.png") -160px -53px;
+    position: absolute;
+    right: 15px;
+    top: 0px; }
+
+.footer {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8fafb; }
+  .footer button {
+    width: 120px;
+    height: 70px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #f8fafb;
+    border: none;
+    color: #5fc0cd;
+    font-weight: bold; }
+    .footer button .img3 {
+      margin: 0 auto;
+      width: 40px;
+      height: 35px;
+      background: url("images/css_sprites.png") -100px -10px; }
+    .footer button .img4 {
+      margin: 0 auto;
+      width: 70px;
+      height: 70px;
+      background: url("images/css_sprites.png") -10px -10px; }
+    .footer button .img5 {
+      margin: 0 auto;
+      width: 36px;
+      height: 35px;
+      background: url("images/css_sprites.png") -10px -100px; }
+    .footer button .three {
+      color: #999; }
+
+/*# sourceMappingURL=12-2.css.map */
