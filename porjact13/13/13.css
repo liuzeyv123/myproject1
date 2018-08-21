@@ -72,9 +72,6 @@ input:checked ~ .maxright {
   background-color: #f0f0f0;
   z-index: 2; }
 
-#bt1:checked .maxleft {
-  width: 150%; }
-
 header {
   width: 100%;
   height: 60px;
@@ -91,7 +88,6 @@ header {
 
 .container-top {
   width: 80%;
-  max-width: 1200px;
   margin: 30px auto;
   margin-top: 30px;
   height: 100px;
@@ -112,7 +108,6 @@ header {
 
 .container-bottom {
   width: 80%;
-  max-width: 1200px;
   background-color: #fff;
   border: 1px solid #c9c9c9;
   margin: 0 auto; }
