@@ -1,0 +1,146 @@
+body{background-color:#f0f0f0;overflow:hidden;}
+@import url(normalize.css);
+$background-color1:#69d1e9;
+$color1:#fff;
+$color2:#fbb435;
+$color3:#9a9a9a;
+$header-hight:60px;
+$container-top-height:100px;
+$container-bottom-height:400px;
+$button-height:80px;
+
+@mixin flex($justify,$align){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+	text-align:center;}
+
+@mixin font($size,$weight,$color99,$line-height){
+	font-size:$size;
+	font-weight:$weight;
+	color:$color99;
+	text-align:center;
+	line-height:$line-height;}
+
+// ==============================
+input{display:none;}
+input:checked ~ .maxleft{transform: translateX(0);}
+input:checked ~ .maxright{transform: translateX(80%);}
+.maxleft{
+	width:80%;
+	height:750px;
+	background-color:$color1;
+	border-right:5px solid $background-color1;
+	box-sizing:border-box;
+	transform: translateX(-100%);
+	transition:transform 2s;
+	float: left;
+	.row{
+		height:$header-hight;
+		border-bottom:1px solid #9a9a9a;
+		@include flex(space-between,center);}
+		.oone{
+			@include flex(center,center);
+			@include font(18px,normal,$background-color1,none);
+		}
+		.img1-1{ 
+			width: 23px; height: 24px;
+	    	background: url('css_sprites2.png') -10px -10px;margin:0 15px}
+	   	.img1-2{
+	   		width: 24px; height: 23px;
+	    	background: url('css_sprites2.png') -53px -10px;margin:0 15px}
+	    .img1-3{
+	    	width: 24px; height: 23px;
+	    	background: url('css_sprites2.png') -10px -54px;margin:0 15px}
+	   	.img1-4{
+	   		width: 23px; height: 24px;
+	    	background: url('css_sprites2.png') -97px -10px;margin:0 15px;}
+	    .img1-5{
+	    	width: 14px; height: 23px;
+	    	background: url('css_sprites2.png') -54px -54px;margin-right:30px;}
+}
+
+		.maxright{
+			width:100%;
+			position: absolute;
+			float:left;
+			transition:transform 2s;
+			background-color:#f0f0f0;
+			z-index:2;}
+
+// ==============================
+header{
+	width:100%;
+	height:$header-hight;
+	background-color:$background-color1;
+	@include flex(flex-start,center);
+	label{
+		width: 34px; height: 27px;
+	    background: url('css_sprites.png') -102px -10px;
+	    margin-left:20px;}
+}
+
+// ==============================
+.container-top{
+	width:80%;
+	max-width:1200px;
+	margin:30px auto;
+	margin-top:30px;
+	height:$container-top-height;
+	background-color:$color1;
+	border:1px solid #c9c9c9;
+	@include font(25px,bold,#9a9a9a,$header-hight*2 - 20px);
+	.img2{	
+		width: 24px; height: 40px;
+  		background: url('css_sprites.png') -58px -10px;
+  		position:absolute;
+  		top:120px;
+    	right:12%;}
+}
+
+// ==============================
+.container-bottom{
+	width:80%;
+	max-width:1200px;
+	background-color:$color1;
+
+	border:1px solid #c9c9c9;
+	margin:0 auto;
+	.gamename{
+		height:$header-hight;
+		@include font(25px,normal,#fbb435,$header-hight);
+		border-bottom:1px solid #fbb435;}
+	.choose{
+		@include flex(center,center);
+		flex-direction:column;
+		margin-top:15px;}
+	button{
+		width:75%;
+		height:$button-height;
+		background-color:$background-color1;
+		@include font(25px,normal,#fff,$button-height);
+		border:none;
+		outline:none;
+		border-radius:5px;}
+	span{
+		margin:20px 0;
+		color:#9a9a9a;}
+	.radius{
+		width: 80%;
+		height: 15px;
+		margin: 10px auto;
+		@include flex(center,center);
+		.rad1,.rad2{
+			margin: 0 5px;
+			width: 15px;
+			height: 15px;
+			background-color:$background-color1;
+			border-radius: 15px;}
+		.rad2{background-color:#f0f0f0;}
+	}
+}
+
+// ==============================
+@media all and (max-width:425px){
+	.img2{display:none;}
+}

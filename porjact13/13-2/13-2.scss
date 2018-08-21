@@ -1,0 +1,114 @@
+body{background-color:#29bde0 ;}
+$background-color:#29bde0;
+$background-color2:#f5c97b;
+$background-color3:#83b09a;
+$background-color4:#fbb435;
+$top-height:60px;
+$mid-height:50px;
+$user-height:90px;
+$footer-height:120px;
+$user-width:80px;
+$color1:#b9e9f5;
+@mixin flex($justify,$align){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+	text-align:center;}
+
+@mixin font($size,$weight,$color99,$line-height){
+	font-size:$size;
+	font-weight:$weight;
+	color:$color99;
+	line-height:$line-height;}
+
+// ================================
+.top{
+	width:100%;
+	height:$top-height;
+	@include flex(space-between,center);
+	@include font(24px,normal,#fff,$top-height);
+	position: fixed;
+	background-color:$background-color;
+	top:0;
+	z-index:10;
+	.img1{
+		width: 39px; height: 40px;
+	    background: url('css_sprites.png') -82px -10px;
+	    transform: scale(0.8);
+		margin-left:10px;}
+    .img2{ 
+		width: 36px; height: 39px;
+		background: url('css_sprites.png') -10px -82px; 
+		transform: scale(0.8);
+		margin-right:10px;}
+}
+@import url(BGM.css);
+.sanjiaoxing{
+	width:	0;
+	height: 0;
+	border: 15px solid;
+	border-color:#b9e9f5 transparent transparent transparent;
+	margin-left: 40px;
+}
+.foot{
+ 	margin:-5px 0 20px 40px;
+	@include font(16px,normal,#fff,none);	
+}
+// ===================================================
+.c{margin-bottom:$footer-height+50px;}
+.container{
+	width:80%;
+	max-width:1200px;
+	margin:0 auto 50px auto;
+	@include flex(space-between,center);
+	.user{
+		width:$user-width;
+		height:$user-height;
+		border:2px solid #fff;}
+		.user1{
+			width:$user-width;
+			height:$user-height*13/18;
+			background-color:$background-color2;
+			@include font(20px,normal,#000,$user-height*13/18);}
+		.user2{
+			width:$user-width;
+			height:$user-height*5/18;
+			background-color:$background-color3;
+			@include font(16px,normal,#fff,$user-height*5/18);}
+		.hover{
+			width: 0;
+			margin:5px 0 0 -2px; 
+			@include flex(space-between,center);
+			transition: width 1s;}
+		.img4,
+		.img5,
+		.img6,
+		.img7{
+			width: 20.5px; height: 28px;
+		    background: url('css_sprites.png') #FFF;
+		    transform: scale(0.95);}
+		.img4{background-position: -67px -82px;}
+		.img5{background-position: -145px -11px;}
+		.img6{background-position:-145px -60px;}
+		.img7{background-position: -14px -141px;}
+		.box:hover .hover{width:84px;}
+}
+.footer{
+	width: 80%;
+	height:$footer-height;
+	margin:0 10%;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	@include flex(center,center);
+	background-color:$background-color;
+	border-top:1px solid #fff;
+	a{
+		width:80%;
+		height:$footer-height/2;
+		background-color:$background-color4;
+		@include font(24px,normal,#fff,60px);
+		text-decoration:none;
+		border-radius:8px;
+	}
+}

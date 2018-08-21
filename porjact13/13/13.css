@@ -1,0 +1,170 @@
+@import url(normalize.css);
+body {
+  background-color: #f0f0f0;
+  overflow: hidden; }
+
+input {
+  display: none; }
+
+input:checked ~ .maxleft {
+  transform: translateX(0); }
+
+input:checked ~ .maxright {
+  transform: translateX(80%); }
+
+.maxleft {
+  width: 80%;
+  height: 750px;
+  background-color: #fff;
+  border-right: 5px solid #69d1e9;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  transition: transform 2s;
+  float: left; }
+  .maxleft .row {
+    height: 60px;
+    border-bottom: 1px solid #9a9a9a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center; }
+  .maxleft .oone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    color: #69d1e9;
+    text-align: center;
+    line-height: none; }
+  .maxleft .img1-1 {
+    width: 23px;
+    height: 24px;
+    background: url("css_sprites2.png") -10px -10px;
+    margin: 0 15px; }
+  .maxleft .img1-2 {
+    width: 24px;
+    height: 23px;
+    background: url("css_sprites2.png") -53px -10px;
+    margin: 0 15px; }
+  .maxleft .img1-3 {
+    width: 24px;
+    height: 23px;
+    background: url("css_sprites2.png") -10px -54px;
+    margin: 0 15px; }
+  .maxleft .img1-4 {
+    width: 23px;
+    height: 24px;
+    background: url("css_sprites2.png") -97px -10px;
+    margin: 0 15px; }
+  .maxleft .img1-5 {
+    width: 14px;
+    height: 23px;
+    background: url("css_sprites2.png") -54px -54px;
+    margin-right: 30px; }
+
+.maxright {
+  width: 100%;
+  position: absolute;
+  float: left;
+  transition: transform 2s;
+  background-color: #f0f0f0;
+  z-index: 2; }
+
+#bt1:checked .maxleft {
+  width: 150%; }
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: #69d1e9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center; }
+  header label {
+    width: 34px;
+    height: 27px;
+    background: url("css_sprites.png") -102px -10px;
+    margin-left: 20px; }
+
+.container-top {
+  width: 80%;
+  max-width: 1200px;
+  margin: 30px auto;
+  margin-top: 30px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  font-size: 25px;
+  font-weight: bold;
+  color: #9a9a9a;
+  text-align: center;
+  line-height: 100px; }
+  .container-top .img2 {
+    width: 24px;
+    height: 40px;
+    background: url("css_sprites.png") -58px -10px;
+    position: absolute;
+    top: 120px;
+    right: 12%; }
+
+.container-bottom {
+  width: 80%;
+  max-width: 1200px;
+  background-color: #fff;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto; }
+  .container-bottom .gamename {
+    height: 60px;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fbb435;
+    text-align: center;
+    line-height: 60px;
+    border-bottom: 1px solid #fbb435; }
+  .container-bottom .choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 15px; }
+  .container-bottom button {
+    width: 75%;
+    height: 80px;
+    background-color: #69d1e9;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    border: none;
+    outline: none;
+    border-radius: 5px; }
+  .container-bottom span {
+    margin: 20px 0;
+    color: #9a9a9a; }
+  .container-bottom .radius {
+    width: 80%;
+    height: 15px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .container-bottom .radius .rad1, .container-bottom .radius .rad2 {
+      margin: 0 5px;
+      width: 15px;
+      height: 15px;
+      background-color: #69d1e9;
+      border-radius: 15px; }
+    .container-bottom .radius .rad2 {
+      background-color: #f0f0f0; }
+
+@media all and (max-width: 425px) {
+  .img2 {
+    display: none; } }
+
+/*# sourceMappingURL=13.css.map */

@@ -1,0 +1,58 @@
+$top-height:60px;
+$mid-height:50px;
+$color1:#b9e9f5;
+@mixin flex($justify,$align){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+	text-align:center;}
+
+@mixin font($size,$weight,$color99,$line-height){
+	font-size:$size;
+	font-weight:$weight;
+	color:$color99;
+	line-height:$line-height;
+	text-align:center;}
+	
+.mid{
+	width:100%;
+	height:$mid-height;
+	margin-top:$top-height;
+	background-color:$color1;
+	@include font(16px,normal,#000,$mid-height);
+	span{float:left;}
+	audio{
+	width: 80px;
+	height:35px;
+	position: absolute;
+	top:70px;
+	right:4px;
+	transform:scale(0.8) rotate(180deg); 
+	z-index: 1;}
+	.notv{
+		width: 280px;
+		height:50px;
+		position: absolute;
+		background-color: #b9e9f5;
+		top:60px;
+		right: 45px;
+		z-index: 2;}
+	.notv2{
+		width: 300px;
+		height: 50px;
+		position: absolute;
+		top:110px;
+		right:0;
+		background-color:#29bde0;
+		z-index: 2;}
+	.img3{
+		width: 67px; height: 77px;
+		background-color: red;
+	    background: url('css_sprites.png') -10px 0px #b9e9f5 ;
+	    transform: scale(0.65);
+		position:absolute;
+		top:46.55px;
+		right:-10px;
+		pointer-events: none;
+		z-index: 3;}
+}
