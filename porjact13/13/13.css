@@ -138,6 +138,14 @@ header {
     border: none;
     outline: none;
     border-radius: 5px; }
+  .container-bottom .img3 {
+    width: 28px;
+    height: 56px;
+    background: url("css_sprites.png") -10px -10px;
+    transform: scale(0.8);
+    position: absolute;
+    right: 11%;
+    top: 450px; }
   .container-bottom span {
     margin: 20px 0;
     color: #9a9a9a; }
