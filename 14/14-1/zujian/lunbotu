@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	body{margin: 0;overflow-x:hidden;}
+	.lunbotu{width: 100%;}	
+	.lunbotu ul{
+		padding: 0;
+		margin: 0;
+		list-style-type:none;
+	}
+	.lunbotu li{width: 100%;position: absolute;}
+	.lunbotu ul li img{width: 100%;}
+		/*轮播动画*/
+	@keyframes move1{
+		0%{transform: translateX(0);}
+		14.3%{transform: translateX(0);}
+		28.6%{transform: translateX(-100%);}
+		43%{transform: translateX(-100%);}
+		57.3%{transform: translateX(-100%);}
+		71.6%{transform: translateX(-100%);}
+		85.9%{transform: translateX(-100%);}			
+		100%{transform: translateX(-100%);}	
+	}
+
+	@keyframes move2{
+		0%{transform: translateX(100%);}
+		14.3%{transform: translateX(100%);}
+		28.6%{transform: translateX(0);}
+		43%{transform: translateX(0);}
+		57.3%{transform: translateX(-100%);}
+		71.6%{transform: translateX(-100%);}
+		85.9%{transform: translateX(-100%);}			
+		100%{transform: translateX(-100%);}
+	}
+
+	@keyframes move3{
+		0%{transform: translateX(100%);}
+		14.3%{transform: translateX(100%);}
+		28.6%{transform: translateX(100%);}
+		43%{transform: translateX(100%);}
+		57.3%{transform: translateX(0);}
+		71.6%{transform: translateX(0);}
+		85.9%{transform: translateX(-100%);}			
+		100%{transform: translateX(-100%);}
+	}
+
+	@keyframes move4{
+		0%{transform: translateX(100%);}
+		14.3%{transform: translateX(100%);}
+		28.6%{transform: translateX(100%);}
+		43%{transform: translateX(100%);}
+		57.3%{transform: translateX(100%);}
+		71.6%{transform: translateX(100%);}
+		85.9%{transform: translateX(0);}			
+		100%{transform: translateX(0);}	
+	}
+	.lunbotu .one{
+		transform: translateX(0);
+		animation: move1 8s linear  infinite;
+		z-index: 5;
+	}
+	.lunbotu .two{
+		transform: translateX(100%);
+		animation: move2 8s linear  infinite;
+		z-index: 4;
+	}
+	.lunbotu .three{
+		transform: translateX(100%);
+		animation: move3 8s linear  infinite;
+		z-index: 3;
+	}
+	.lunbotu .four{
+		transform: translateX(100%);
+		animation: move4 8s linear  infinite;
+		z-index: 2;
+	}
+	</style>
+</head>
+<body>
+	<div class="lunbotu">
+		<ul>
+			<li class="one"><img src="1.png"></li>
+			<li class="two"><img src="2.png"></li>
+			<li class="three"><img src="3.png"></li>
+			<li class="four"><img src="1.png"></li>
+		</ul>
+	</div>
+</body>
+</html>

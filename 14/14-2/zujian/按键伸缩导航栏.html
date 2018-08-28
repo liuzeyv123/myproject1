@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<style type="text/css">
+		*{margin: 0;padding:0;}
+		a{color:#000;text-decoration:none;}
+		/*横向导航栏*/
+		.max{
+			width: 100%;
+			height:50px;
+			background-color:#29b078;
+			border-bottom: 1px solid #fff;
+			display: flex;
+			justify-content: center;
+		}
+		.max ul{
+			width: 80%;
+			max-width: 1200px;
+			list-style-type: none;
+			display: flex;
+			justify-content:flex-end;
+
+		}
+		.max ul li{
+			width: 60px;
+			height: 48px;
+			line-height: 50px;
+			font-size: 20px;
+			font-weight:bold;
+			margin-right:10px;
+			text-align: center;
+		}
+		.max ul li a{color: #fff;}
+		.max ul li:hover{border-bottom: 2px solid #FFF;}
+		/*以下为纵向导航按钮样式设置*/
+		label{
+		 	width: 40px;
+		 	height: 40px;
+		 	display: flex;
+		 	justify-content: center;
+		 	align-items: center;
+		 	flex-direction:column;
+			border:2px solid #fff;
+		 	border-radius: 5px;
+		 	position: absolute;
+		 	right: 10px;
+		 	top:3px;
+		 }
+		label span{
+			display: block;
+			width: 20px;
+			height: 12px;
+			}
+		label span:nth-child(1){border-bottom:4px solid #fff;}
+		label span:nth-child(3){border-top:4px solid #fff;}
+		input{display: none;}
+		/*以下为导航栏样式设置*/
+		.column{
+			width: 100%;
+			height: 0;
+			background:#29b078;
+			transition:height 0.5s linear;
+			overflow-y:hidden; 
+		}
+		.column span{
+			display: block;
+			width: 100%;
+			height: 60px;
+			margin:5px auto;
+			text-align: center;
+			line-height: 60px;
+			color: #fff;
+			font-weight:bold;
+			font-size:25px;
+		}
+		/*以下是点击事件*/
+		input:checked ~ .column{height: 262px;transition:height 0.5s linear;}
+		.column span:hover{border-bottom: 2px solid #fff;}
+
+
+
+		@media all and (min-width:768px){
+			.min{display: none;}
+		
+		}
+		@media all and (max-width:768px){
+			.max ul{display: none;}
+		}
+	</style>
+</head>
+<body>
+	<div class="max">
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">职业</a></li>
+			<li><a href="">推荐</a></li>
+			<li><a href="">关于</a></li>
+		</ul>
+	</div>
+	<div class="min">
+		<input type="checkbox" id="lunbo" />
+		<div class="daohang-button">
+			<label for="lunbo">
+				<span></span>
+	            <span></span>
+	            <span></span>
+			</label>
+		</div>
+		<div class="column">
+			<span>首页</span>
+			<span>职业</span>
+			<span>推荐</span>
+			<span>关于</span>
+		</div>
+	</div>
+</body>
+</html>

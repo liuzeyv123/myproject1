@@ -1,0 +1,386 @@
+*{margin:0; padding:0;font-family: "Microsoft YaHei";}
+body{background-color: #fafafa; overflow-x:hidden;}
+$background-color1:#fff;
+$background-color-bottom:#26a26f;
+$color1:#29b078;
+$color2:#999;
+$a-color:#000;
+$color-dian:#e2e2e2;
+$footer-color:#efefef;
+$header-height:35px;
+$footer-height:180px;
+$user-width:300px;
+$user-height:468px;
+@mixin font($size,$weight,$color,$line){
+	font-size:$size;
+	font-weight:$weight;
+	color:$color;
+	line-height:$line;
+}
+@mixin flex($justify,$align){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+}
+.header{
+	background-color:$background-color1;
+	padding:0 10%;
+	.headertop{
+		width:100%;
+		height:$header-height;
+		max-width:1200px;
+		margin:0 auto;
+		background-color:$background-color1;
+		.phone{
+			@include font(14px,normal,$color1,none);
+			margin:6px auto;
+			position:absolute;
+			float:left;
+		}
+		.icon1{
+			.login{
+				height:$header-height;
+				line-height:$header-height;
+				position: absolute;
+				right: 5%;
+				display: none;
+				a{color:$color1;}
+			}
+			.img{
+				width:100px;
+				margin: 6px auto;
+				@include flex(space-around,center);
+				float: right;
+				.img1{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -206px;}
+				.img2{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -250px;}
+				.img3{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -162px;}
+			}
+		}
+	}
+}
+@media all and (max-width:768px){
+	 .header .headertop .icon1 .login{display: block;}
+	.phone{display: none;}
+	 .header .headertop .icon1 .img{display: none;}
+}
+@import url("zujian/daohang.css");
+// =====================================================
+.container{
+	width: 100%;
+	margin-bottom: 100px;
+	padding: 0;
+	a {color:$a-color;}
+	a:hover{
+		text-decoration: none;
+		color: $background-color1;
+		background-color:#29b078;}
+	.containar-main{
+		width: 80%;
+		max-width: 1200px;
+		text-align: left;
+		@include font(18px,normal,$a-color,none);
+		margin:0 auto;		
+		ul{
+			height: 60px;
+			margin-top: 10px;
+			list-style-type: none;
+			color: $color2;
+			@include flex(flex-start,center);
+			flex-wrap: wrap;
+			li {width:72px;
+				margin-left: 20px;}
+			li :nth-child(1){width: 40px;}
+		}
+		.container-name{
+			width: 100%;
+			height: 80px;
+			line-height: 80px;
+			border-bottom: 1px solid #d0d6d9;}
+		.container-row{
+			margin-top: 50px;
+			@include flex(space-between,center);
+			flex-wrap:wrap;
+			.user:hover .zhe{display: block;}
+			.user{
+				width:$user-width;
+				height: $user-height;
+				border:1px solid #eeeded;
+				border-radius: 2px;
+				background-color: #fff;
+				@include font(14px,normal,$a-color,none);
+				margin-bottom: 20px;
+				.zhe{
+					width:$user-width;
+					height: $user-height;	
+					position: absolute;
+					display: none;
+					background-color: $a-color;
+					opacity:0.75;
+					z-index: 5;
+					color: $background-color1;
+					vertical-align: middle;
+					.zhe1{
+						font-size: 16px;
+						padding: 120px 20px;
+						.title1{
+							width: 100%;
+							font-size: 20px;
+							text-align: center;
+							margin-bottom: 20px;
+						}
+					}
+				}	
+				.usertop{
+					width: 100%;
+					@include flex(flex-start,flex-start);
+					border:1px solid #eeeded;
+					.imguser{
+						width: 138px; height: 140px;
+				    	background: url('css_sprites2.png') -10px -10px;
+				    	margin:15px 5px;}
+					.usertext{
+						width: 60%;
+						margin-top:15px;
+					}
+				}
+				.usermid{
+					height: 120px;
+					@include flex(flex-start,flex-start);
+					flex-wrap:wrap;
+					.usermid-one{
+						width: 50%; 
+						@include flex(flex-start,flex-start);
+						border:1px solid #eeeded;
+						box-sizing: border-box;
+						.huise{color:$color2;}
+						.red{color: red;}
+						.imguser1{
+							 width: 16px; height: 15px;
+					   		 background: url('css_sprites2.png') -168px -10px;
+						}		
+					} 	
+				}
+				.money{
+					@include flex(flex-start,flex-start);
+					.usermid2{
+						width:40%;
+						height: 120px;
+						text-align: center;
+						line-height: 120px;
+						border:1px solid #eeeded;
+						box-sizing: border-box;
+						.huise{color:$color2;}
+					}
+					.usermid3{
+						width:60%;
+						height: 120px;
+						border:1px solid #eeeded;
+						box-sizing: border-box;	
+						.usermid2-1{
+							width: 100%;
+							height: 40px;
+							@include flex(space-between,center);
+							line-height: 40px;
+							border-top:1px solid #eeeded;
+							.lft{margin-left: 20px;}
+							.rig{margin-right: 5px;}
+						}
+						.topno{border-top:none;}
+					}
+				}
+				.bottom{
+					border: 1px solid #eeeded;
+					border-bottom:none;
+					.bt1{
+						height: 30px;
+						@include font(18px,bold,$a-color,30px);
+						padding-left: 5px;
+						border-bottom:1px solid #eeeded; 
+						.red{color: red;}
+					}
+					.warn{
+						height: 25px;
+						line-height: 25px;
+						padding-left: 5px;
+						color:$color2;}
+				}
+			}
+			.yincang,.yincang2{visibility: hidden;}
+		}
+	}
+}
+@media all and (min-width: 1400px){
+	.user{width: 350px !important;}
+	.zhe{width: 350px !important;}
+}
+@media all and (max-width:1125px){
+	.yincang2{display: none !important;}
+}
+@media all and (max-width: 750px){
+	.user{margin: 0 auto!important;}
+	.yincang{display:none!important;}
+}
+@media all and (max-width:396px){
+	.list{height: 150px!important;}	
+}
+@media all and (max-width: 375px){
+	.containar-main{
+		width: 95% !important;
+		margin: 0 2.5%!important;}
+	.user{margin: 0 auto!important;}
+}
+// ======================================================
+.footer{
+	width:100%;
+	height:$footer-height;
+	
+	background-color: #fff;
+	.footerone{
+		max-width: 1200px;
+		margin: 0 auto;
+		.footer1{
+			width: 100px;
+			height: $footer-height - 100px;
+			@include font(20px,bold,$a-color,80px);
+			margin:0 auto -25px auto; 
+			text-align: center;}
+		.ulli{
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			 ul{
+				width:100%;
+				@include flex(flex-start,center);
+				flex-wrap: wrap;
+				a:hover li{color: red;}
+				li{
+					width:70px;
+					float: left;
+					@include font(16px,normal,#999,none);
+					margin:5px 23px;}
+			
+				}
+			}
+		}
+	}
+.footertwo{
+	width: 100%;
+	height:250px; 
+	position: relative;
+	bottom: 0;
+	background-color: $color1;
+	.back{
+		@include flex(center,center);
+		width:62%;
+		max-width: 1200px;
+		margin: 0 auto;	
+		.footerleft{
+			height: 180px;
+			margin-top: 40px;
+			flex: 1;
+			.leftone{
+				font-size: 20px;
+				color:$footer-color;
+				padding:5px 0;}
+			.lefttwo a,
+			.lefttwo{
+				color:$footer-color;
+				margin: 70px 0;
+				font-size: 16px;}	
+		}
+		.footerright{
+			height: 180px;
+			margin-left: 30px;
+			margin-top: 30px;
+			flex: 1;
+			.rightone{
+				font-size: 20px;
+				color:$footer-color;
+				margin: 20px 0;
+			}
+			.righttwo,
+			.righttwo a{
+				color:$footer-color;
+				font-size: 16px;
+				margin: 24px 0;
+			}
+			.rightthree,
+			.rightthree a{
+				color:$footer-color;
+				font-size: 16px;
+				a:hover{color: red;}
+			}
+		}
+	}
+	.weixin{
+		height: 180px;
+		margin-top:30px;
+		flex: 1; 
+		.box2{
+			float: right;
+			margin-top: 20px;
+			.erweima{color:$background-color1;}
+			.img18{
+				width: 92px; height: 92px;
+			    background: url('css_sprites.png') -425px -266px;}
+		}
+	}
+}
+.number{
+	width: 100%;
+	border-top: 1px solid $background-color1;
+	color:$background-color1;
+	background-color: $background-color-bottom;
+	position: relative;
+	bottom:0;
+	text-align:center;
+}
+
+@media all and (max-width: 1200px){
+	.back{width: 100% !important;}
+	.box2{margin-right: 30px !important;}
+}
+@media all and (max-width: 750px){
+	.footerone{height: 100% !important;}
+	.footertwo{
+	width: 100% !important;
+	height:600px !important; 
+	position: relative!important;
+	bottom: 0!important;
+	background-color: #29b078!important;
+	}
+	.back{display: block!important;}
+	.footerleft{
+		margin-top: 0!important;
+		text-align: center!important;
+	}
+	.footerright{
+		margin: 0!important;
+		text-align: center!important;
+	}
+	.weixin{
+		@include flex(center,center);
+		margin:0 !important;
+	}
+	.box2{margin: 0!important;}
+	.img18{margin:0 auto;}
+}
+
+@media all and(max-width:811px){
+	.footer ul{justify-content:center!important;}
+
+}
+@media all and(max-width:700px){
+	.footer ul{width:475px !important;margin:0 auto;}
+}
+@media all and(max-width:475px){
+	.footer ul{width:300px !important;}
+	.footer{height:280px;}
+
+}
