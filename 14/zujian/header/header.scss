@@ -1,0 +1,65 @@
+*{letter-spacing:1px;margin:0; padding:0;font-family: "Microsoft YaHei";}
+body{background-color: #fafafa; overflow-x:hidden;}
+a{color:#000;text-decoration:none;}
+$background-color1:#fff;
+$color1:#29b078;
+$header-height:35px;
+@mixin font($size,$weight,$color,$line){
+	font-size:$size;
+	font-weight:$weight;
+	color:$color;
+	line-height:$line;
+}
+@mixin flex($justify,$align){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+}
+.header{
+	background-color:$background-color1;
+	padding:0 10%;
+	.headertop{
+		width:100%;
+		height:$header-height;
+		max-width:1200px;
+		margin:0 auto;
+		background-color:$background-color1;
+		.phone{
+			@include font(14px,normal,$color1,none);
+			margin:6px auto;
+			position:absolute;
+			float:left;
+		}
+		.icon1{
+			.login{
+				height:$header-height;
+				line-height:$header-height;
+				position: absolute;
+				right: 5%;
+				display: none;
+				a{color:$color1;}
+			}
+			.img{
+				width:100px;
+				margin: 6px auto;
+				@include flex(space-around,center);
+				float: right;
+				.img1{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -206px;}
+				.img2{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -250px;}
+				.img3{
+					 width: 25px; height: 24px;
+				    background: url('css_sprites.png') -553px -162px;}
+			}
+		}
+	}
+}
+@media all and (max-width:768px){
+	 .header .headertop .icon1 .login{display: block;}
+	.phone{display: none;}
+	 .header .headertop .icon1 .img{display: none;}
+}
+@import url("daohang.css");

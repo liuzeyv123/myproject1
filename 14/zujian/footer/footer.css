@@ -1,0 +1,175 @@
+* {
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei"; }
+
+body {
+  background-color: #fafafa;
+  overflow-x: hidden; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+.footer {
+  width: 100%;
+  height: 180px;
+  background-color: #fff; }
+  .footer .footerone {
+    max-width: 1200px;
+    margin: 0 auto; }
+    .footer .footerone .footer1 {
+      width: 100px;
+      height: 80px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #000;
+      line-height: 80px;
+      margin: 0 auto -25px auto;
+      text-align: center; }
+    .footer .footerone .ulli {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto; }
+      .footer .footerone .ulli ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap; }
+        .footer .footerone .ulli ul a:hover li {
+          color: red; }
+        .footer .footerone .ulli ul li {
+          width: 70px;
+          float: left;
+          font-size: 16px;
+          font-weight: normal;
+          color: #999;
+          line-height: none;
+          margin: 5px 23px; }
+
+.footertwo {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  bottom: 0;
+  background-color: #29b078; }
+  .footertwo .back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62%;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .footertwo .back .footerleft {
+      height: 180px;
+      margin-top: 40px;
+      flex: 1; }
+      .footertwo .back .footerleft .leftone {
+        font-size: 20px;
+        color: #efefef;
+        padding: 5px 0; }
+      .footertwo .back .footerleft .lefttwo a,
+      .footertwo .back .footerleft .lefttwo {
+        color: #efefef;
+        margin: 70px 0;
+        font-size: 16px; }
+    .footertwo .back .footerright {
+      height: 180px;
+      margin-left: 30px;
+      margin-top: 30px;
+      flex: 1; }
+      .footertwo .back .footerright .rightone {
+        font-size: 20px;
+        color: #efefef;
+        margin: 20px 0; }
+      .footertwo .back .footerright .righttwo,
+      .footertwo .back .footerright .righttwo a {
+        color: #efefef;
+        font-size: 16px;
+        margin: 24px 0; }
+      .footertwo .back .footerright .rightthree,
+      .footertwo .back .footerright .rightthree a {
+        color: #efefef;
+        font-size: 16px; }
+        .footertwo .back .footerright .rightthree a:hover,
+        .footertwo .back .footerright .rightthree a a:hover {
+          color: red; }
+  .footertwo .weixin {
+    height: 180px;
+    margin-top: 30px;
+    flex: 1; }
+    .footertwo .weixin .box2 {
+      float: right;
+      margin-top: 20px; }
+      .footertwo .weixin .box2 .erweima {
+        color: #fff; }
+      .footertwo .weixin .box2 .img18 {
+        width: 92px;
+        height: 92px;
+        background: url("css_sprites.png") -425px -266px; }
+
+.number {
+  width: 100%;
+  border-top: 1px solid #fff;
+  color: #fff;
+  background-color: #26a26f;
+  position: relative;
+  bottom: 0;
+  text-align: center; }
+
+@media all and (max-width: 1200px) {
+  .back {
+    width: 100% !important; }
+
+  .box2 {
+    margin-right: 30px !important; } }
+@media all and (max-width: 750px) {
+  .footerone {
+    height: 100% !important; }
+
+  .footertwo {
+    width: 100% !important;
+    height: 600px !important;
+    position: relative !important;
+    bottom: 0 !important;
+    background-color: #29b078 !important; }
+
+  .back {
+    display: block !important; }
+
+  .footerleft {
+    margin-top: 0 !important;
+    text-align: center !important; }
+
+  .footerright {
+    margin: 0 !important;
+    text-align: center !important; }
+
+  .weixin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important; }
+
+  .box2 {
+    margin: 0 !important; }
+
+  .img18 {
+    margin: 0 auto; } }
+@media all and (max-width: 811px) {
+  .footer ul {
+    justify-content: center !important; } }
+@media all and (max-width: 700px) {
+  .footer ul {
+    width: 475px !important;
+    margin: 0 auto; } }
+@media all and (max-width: 475px) {
+  .footer ul {
+    width: 300px !important; }
+
+  .footer {
+    height: 280px; } }
+
+/*# sourceMappingURL=footer.css.map */
