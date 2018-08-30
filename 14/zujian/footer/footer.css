@@ -55,6 +55,8 @@ a {
   position: relative;
   bottom: 0;
   background-color: #29b078; }
+  .footertwo a:hover {
+    color: red !important; }
   .footertwo .back {
     display: flex;
     justify-content: center;
@@ -93,9 +95,6 @@ a {
       .footertwo .back .footerright .rightthree a {
         color: #efefef;
         font-size: 16px; }
-        .footertwo .back .footerright .rightthree a:hover,
-        .footertwo .back .footerright .rightthree a a:hover {
-          color: red; }
   .footertwo .weixin {
     height: 180px;
     margin-top: 30px;

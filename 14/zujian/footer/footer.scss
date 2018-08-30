@@ -59,6 +59,7 @@ $footer-height:180px;
 	position: relative;
 	bottom: 0;
 	background-color: $color1;
+	a:hover{color: red!important;}
 	.back{
 		@include flex(center,center);
 		width:62%;
@@ -98,7 +99,7 @@ $footer-height:180px;
 			.rightthree a{
 				color:$footer-color;
 				font-size: 16px;
-				a:hover{color: red;}
+				
 			}
 		}
 	}
