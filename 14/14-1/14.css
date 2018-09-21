@@ -2,7 +2,8 @@
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
-  font-family: "Microsoft YaHei"; }
+  font-family: "Microsoft YaHei"; 
+}
 
 body {
   background-color: #fafafa;
@@ -12,117 +13,54 @@ a {
   color: #000;
   text-decoration: none; }
 
-.lunbotu {
-  width: 100%;
-  height: 35vw; }
 
-.lunbotu ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: block;
-  clear: both; }
+    .lunbo1{
+      width:500%;
+      height: 31.3vw;
+      position: absolute;
+      transition: left linear 0.5s;
+      
+    }
+    .lunbo-img1{
+      width: 20%;
+      height: 31.3vw;
+      position: relative;
+      float: left;
+      background:url("1.png") no-repeat;
+      background-size:contain;
+    }
+    .lunbo-img2{
+      width: 20%;
+      height: 31.3vw;
+      position: relative;
+      float: left;
+      background:url("2.png") no-repeat;
+      background-size:contain;
+    }
+    .lunbo-img3{
+      width: 20%;
+      height: 31.3vw;
+      position: relative;
+      float: left;
+      background:url("3.png") no-repeat;
+      background-size:contain;
+    }
+    #btn1,#btn2{
+      position: absolute;
+      width: 15%;
+      height: 30vw;
+      background:transparent; 
+      cursor: pointer;
+    }
+    #btn2{right: 0;}
 
-.lunbotu li {
-  width: 100%;
-  position: absolute;
-  clear: both; }
-
-.lunbotu ul li img {
-  width: 100%; }
-
-@keyframes move1 {
-  0% {
-    transform: translateX(0); }
-  14.3% {
-    transform: translateX(0); }
-  28.6% {
-    transform: translateX(-100%); }
-  43% {
-    transform: translateX(-100%); }
-  57.3% {
-    transform: translateX(-100%); }
-  71.6% {
-    transform: translateX(-100%); }
-  85.9% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(-100%); } }
-@keyframes move2 {
-  0% {
-    transform: translateX(100%); }
-  14.3% {
-    transform: translateX(100%); }
-  28.6% {
-    transform: translateX(0); }
-  43% {
-    transform: translateX(0); }
-  57.3% {
-    transform: translateX(-100%); }
-  71.6% {
-    transform: translateX(-100%); }
-  85.9% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(-100%); } }
-@keyframes move3 {
-  0% {
-    transform: translateX(100%); }
-  14.3% {
-    transform: translateX(100%); }
-  28.6% {
-    transform: translateX(100%); }
-  43% {
-    transform: translateX(100%); }
-  57.3% {
-    transform: translateX(0); }
-  71.6% {
-    transform: translateX(0); }
-  85.9% {
-    transform: translateX(-100%); }
-  100% {
-    transform: translateX(-100%); } }
-@keyframes move4 {
-  0% {
-    transform: translateX(100%); }
-  14.3% {
-    transform: translateX(100%); }
-  28.6% {
-    transform: translateX(100%); }
-  43% {
-    transform: translateX(100%); }
-  57.3% {
-    transform: translateX(100%); }
-  71.6% {
-    transform: translateX(100%); }
-  85.9% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(0); } }
-.lunbotu .one {
-  transform: translateX(0);
-  animation: move1 10s linear  infinite;
-  z-index: 5; }
-
-.lunbotu .two {
-  transform: translateX(100%);
-  animation: move2 10s linear  infinite;
-  z-index: 4; }
-
-.lunbotu .three {
-  transform: translateX(100%);
-  animation: move3 10s linear  infinite;
-  z-index: 3; }
-
-.lunbotu .four {
-  transform: translateX(100%);
-  animation: move4 10s linear  infinite;
-  z-index: 2; }
 
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 20px auto; }
+  margin: 20px auto;
+  margin-top: 35vw;
+}
   .container .row {
     width: 100%;
     margin: 0 auto;
