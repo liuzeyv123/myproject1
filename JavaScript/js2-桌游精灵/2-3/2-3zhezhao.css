@@ -1,0 +1,50 @@
+		.div1{
+			position: absolute;
+			display: none;
+			z-index: 4;
+		}
+		.zhezhao{
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			background: #000;
+			opacity: 0.2;
+		}
+		.window{
+			width: 250px;
+			height: 150px;
+			position:relative;
+			left:calc(50vw - 125px);
+			top: calc(50vh - 75px);
+			border-radius: 5px;
+			background: #fff;
+			z-index: 5;
+		}
+		.prompt{
+			width: 250px;
+			height: 110px;
+			text-align: center;
+			line-height: 110px;
+			font-size: 20px;
+		}
+		.yes,.no{
+			float: left;
+			width: 124px;
+			height: 40px;
+			background: #fff;
+			text-align: center;
+			line-height: 40px;
+			bottom: 0;
+		}
+		.yes{
+			border-top:1px solid #eee;
+			border-right:1px solid #eee;
+			border-bottom-left-radius:5px;
+			cursor: pointer;
+
+		}
+		.no{
+			border-top:1px solid #eee;
+			border-bottom-right-radius:5px;
+			cursor: pointer;
+		}

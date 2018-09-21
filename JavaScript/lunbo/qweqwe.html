@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<meta name="viewport" content="width=device-width, inicial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+	<style type="text/css">
+	*{margin: 0;overflow-x: hidden;}
+		.lunbo{
+			width:500%;
+			height: 31.3vw;
+			position: absolute;
+			transition: left linear 0.5s;
+			
+		}
+		.img1{
+			width: 20%;
+			height: 31.3vw;
+			position: relative;
+			float: left;
+			background:url("1.png") no-repeat;
+			background-size:contain;
+		}
+		.img2{
+			width: 20%;
+			height: 31.3vw;
+			position: relative;
+			float: left;
+			background:url("2.png") no-repeat;
+			background-size:contain;
+		}
+		.img3{
+			width: 20%;
+			height: 31.3vw;
+			position: relative;
+			float: left;
+			background:url("3.png") no-repeat;
+			background-size:contain;
+		}
+		#btn1,#btn2{
+			position: absolute;
+			top:0;
+			width: 15%;
+			height: 31.3vw;
+			background:transparent; 
+			cursor: pointer;
+		}
+		#btn2{right: 0;}
+	</style>
+
+<script type="text/javascript">
+window.onload=function(){
+	var lunbo=document.getElementById("lunbo");
+	var prev=document.getElementById("btn1");
+	var next=document.getElementById("btn2");
+	
+	function animate(left1){
+		var newLeft=parseInt(lunbo.style.left) + left1;
+//右移动到最后一张后,取消transition过度,直接跳转第一张,然后再加上transition开始setInterval循环	
+		if (newLeft== -500) {
+			clearInterval(timer);
+			lunbo.style.transition="none";
+			newLeft= -100;
+			setInterval(function(){
+				lunbo.style.transition="left linear 0.5s";
+				next.onclick()},2500);		
+		}
+		console.log(newLeft);
+		return newLeft+"%";
+	}
+//按键左
+	prev.onclick=function(){
+		lunbo.style.left=animate(100);
+		prev.style.display="none";
+		setTimeout(function(){
+			prev.style.display="block";
+		},500)
+	}
+//按键右
+	next.onclick=function(){
+		lunbo.style.left=animate(-100);
+		next.style.display="none";
+		setTimeout(function(){
+			next.style.display="block";
+		},500)
+	}
+//播放
+	var timer=setInterval(function(){next.onclick()},2500);
+	timer;
+//鼠标划入暂停
+	var body1=document.getElementById("body1");
+	body1.onmouseover=function(){
+		clearInterval(timer);
+	}
+	body1.onmouseout=function(){		
+	}
+}
+</script>
+
+</head>                                                                              
+<body> 
+	<div id="body1">
+		<div class="lunbo" id="lunbo" style="left:-100%;">
+			<div class="img3" id="img0"></div>
+			<div class="img1" id="img1"></div>
+			<div class="img2" id="img2"></div>
+			<div class="img3" id="img3"></div>
+			<div class="img1" id="img4"></div>
+		</div>
+		<div id="btn1"></div>
+		<div id="btn2"></div>
+	</div>
+</body>
+</html>

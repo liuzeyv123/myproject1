@@ -1,0 +1,32 @@
+body{margin: 0;}
+#box{
+	width:80vmin;
+	height:80vmin;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:wrap;
+}
+#box div{
+	width: 32%;
+	height: 32%;
+	background: orange;
+	border-radius: 10px;
+}
+
+#btn1,#btn2{
+	width: 80vmin;
+	height: 50px;
+	font-size: 16px;
+	display: block;
+	border: 2px solid orange;
+	background:#fff;
+	border-radius: 5px;
+	outline:none;
+	margin: 0 auto 5px auto;
+}
+#btn1:hover,
+#btn2:hover{
+	background: orange;
+	cursor: pointer;
+}
