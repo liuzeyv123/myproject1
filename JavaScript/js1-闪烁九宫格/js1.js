@@ -6,7 +6,7 @@ window.onload=function(){
 	var btn1=document.getElementById("btn1");
 
 
-	btn1.onclick=function(){
+
 	function autoplay(){
 	//随机颜色-封装函数
 		function randomColor(){
@@ -42,8 +42,10 @@ window.onload=function(){
 				div1[num[1]].style.backgroundColor=randomColor();
 				div1[num[2]].style.backgroundColor=randomColor();
 			}
+	btn1.onclick=function(){
 		autoplay();
 		t=setInterval(autoplay,2000);
+		btn1.onclick=function(){};
 	}
 	//按键结束闪烁
 	var btn2=document.getElementById("btn2");
@@ -52,5 +54,9 @@ window.onload=function(){
 		for (var m=0;m<9;m++){
 			div1[m].style.backgroundColor="orange";
 		}
+	btn1.onclick=function(){
+		autoplay();
+		t=setInterval(autoplay,2000);
+		btn1.onclick=function(){};}
 	}
 }
