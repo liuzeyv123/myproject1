@@ -21,10 +21,12 @@ window.onload=function(){
 				killer.innerHTML="&nbsp;";
 				human.innerHTML="&nbsp;";
 				if (reg.test(number.value)!=true) {
+					killer.innerHTML="&nbsp;";
+					human.innerHTML="&nbsp;";
 					div1.style.display="block";
 				}
 				else{
-					killer.innerHTML=parseInt(number.value*1/4);
+					killer.innerHTML=parseInt(number.value*1/3);
 					human.innerHTML=number.value - killer.innerHTML;
 					btn.onclick=function(){		
 						localStorage.setItem("killer",killer.innerHTML);
