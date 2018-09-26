@@ -26,7 +26,7 @@ window.onload=function(){
 					div1.style.display="block";
 				}
 				else{
-					killer.innerHTML=parseInt(number.value*1/3);
+					killer.innerHTML=parseInt(number.value*1.6/5);
 					human.innerHTML=number.value - killer.innerHTML;
 					btn.onclick=function(){		
 						localStorage.setItem("killer",killer.innerHTML);
