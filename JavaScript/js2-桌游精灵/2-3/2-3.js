@@ -28,7 +28,10 @@ window.onload=function(){
 				else{
 					killer.innerHTML=parseInt(number.value*1/3);
 					human.innerHTML=number.value - killer.innerHTML;
-					if (number.value==18) {
+					if (number.value==15) {
+						killer.innerHTML=4;
+						human.innerHTML=number.value - killer.innerHTML;
+					}else if (number.value==18) {
 						killer.innerHTML=5;
 						human.innerHTML=number.value - killer.innerHTML;
 					}
