@@ -5,7 +5,7 @@ $(document).ready(function(){
 		window.location.href="../2-3/2-3.html";
 	})
 
-	for(var i=0 ;i<player.length;i++){
+	for(var i=0 ;i<7;i++){
 		$(".user").eq(i).show();
 		$(".user1").eq(i).html(player[i]);
 	}
