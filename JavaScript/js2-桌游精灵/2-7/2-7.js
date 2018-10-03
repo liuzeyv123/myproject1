@@ -10,7 +10,7 @@ $(document).ready(function(){
 	// 	$(".user1").eq(i).html(player[i]);
 	// }
 
-	for(var i=0 ;i<5;i++){
+	for(var i=0 ;i<7;i++){
 		$(".user").eq(i).show();
 		$(".user1").eq(i).html(player[i]);
 	}
