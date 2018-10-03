@@ -5,11 +5,16 @@ $(document).ready(function(){
 		window.location.href="../2-3/2-3.html";
 	})
 
-	for(var i=0 ;i<player.length;i++){
+	// for(var i=0 ;i<player.length;i++){
+	// 	$(".user").eq(i).show();
+	// 	$(".user1").eq(i).html(player[i]);
+	// }
+
+	for(var i=0 ;i<5;i++){
 		$(".user").eq(i).show();
 		$(".user1").eq(i).html(player[i]);
 	}
-	
+
 	$(".hover").hide();
 	$(".user").click(function(){
 		console.log($(this));
