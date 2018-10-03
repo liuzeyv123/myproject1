@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	var player=localStorage.getItem("player").split(",");
-
+	// var player=localStorage.getItem("player").split(",");
+	var player=["杀手","杀手","平民","平民","平民","平民"];
 	$(".img1").click(function(){
 		window.location.href="../2-3/2-3.html";
 	})
