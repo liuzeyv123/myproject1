@@ -12,20 +12,22 @@ $(document).ready(function () {
 		window.location.href="../2-5/2-5.html";
 	})
 	//有限状态机
-	var kill = $(".play_one");
-	var lastWorld = $(".play_two");
-	var speak = $(".play_three");
-	var vote = $(".play_four");
-	
+	var kill = $("#play_one");
+	var lastWorld = $("#play_two");
+	var speak = $("#play_three");
+	var vote = $("#play_four");
+	console.log($("#play_one"));
+
+	//设置状态机当前状态,当state(状态)为空时候,从alive开始,当状态为voted时(一个循环结束时),从头开始(alive)
 	var state = localStorage.state;
-	if ( state == null ){
+	if (state == null ){
 			state = 'alive';
 		}
 	if (state == 'voted' ){
 			state = 'alive';
 		}
 	fsm = new StateMachine({
-		init:state,
+		init:"alive",
 		//状态转变
 		transition:[
 			{name:'kill',form:'alive',to:'dead'},
@@ -56,13 +58,14 @@ $(document).ready(function () {
 		}
 
 	})
+
 	//点击第一个杀人按钮时触发的事件
 	kill.click(function(){
+		console.log(fsm.state);   
 		if (fsm.state=="alive") {
-			fsm.kill();                                //改变当前状态;
+			fsm.kill();            //改变当前状态;
 			//window.location.href ="../2-5/2-5.html";
 			localStorage.state=fsm.state;			   //存储改变后的状态;
-
 		}else{
 			alert("请按顺序操作");
 		}
