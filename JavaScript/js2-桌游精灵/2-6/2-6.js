@@ -19,7 +19,7 @@ $(document).ready(function () {
 	console.log($("#play_one"));
 
 	//设置状态机当前状态,当state(状态)为空时候,从alive开始,当状态为voted时(一个循环结束时),从头开始(alive)
-	var state = localStorage.state;
+	var state = localStorage.getItem("state");
 	if (state == null ){
 			state = 'alive';
 		}
@@ -65,7 +65,7 @@ $(document).ready(function () {
 		if (fsm.state=="alive") {
 			fsm.kill();            //改变当前状态;
 			//window.location.href ="../2-5/2-5.html";
-			localStorage.state=fsm.state;			   //存储改变后的状态;
+			localStorage.setItem("state",fsm.state);//存储改变后的状态;
 		}else{
 			alert("请按顺序操作");
 		}
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		if (fsm.state=='dead'){
 			alert("请死者亮明身份并且发表遗言");
 			fsm.lastWorld();
-			localStorage.state=fsm.state;
+			localStorage.setItem("state",fsm.state);
 		}else{
 			alert("请按顺序操作");
 		}
@@ -86,7 +86,7 @@ $(document).ready(function () {
 		if (fsm.state=='spock') {
 			alert("请按顺序依次发言");
 			fsm.speak();
-			localStorage.state=fsm.state;
+			localStorage.setItem("state",fsm.state);
 		}else{
 			alert("请按顺序操作");
 		}
@@ -96,7 +96,7 @@ $(document).ready(function () {
 		if (fsm.state=='konwn') {
 			fsm.vote();
 			//window.location.href="";
-			lacalStorage.state=fsm.state;
+			localStorage.setItem("state",fsm.state);
 		}else{
 			alert("请按顺序操作");
 		}
