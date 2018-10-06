@@ -5,8 +5,8 @@ window.onload=function(){
 	var radius1=document.getElementById("radius1");
 	var radius2=document.getElementById("radius2");
 	var left=document.getElementById("left");
-	var killer=localStorage.getItem("killer");
-	var human=localStorage.getItem("human");
+	var killer=localStorage.getItem("killerNum");
+	var human=localStorage.getItem("humanNum");
 	var text=document.getElementById("text");
 	var i=2;
 	console.log(killer);
@@ -47,9 +47,7 @@ player.sort(function(a,b){return Math.random()>0.5?-1:1;});
 					btn.onclick=function(){
 						window.location.href="../2-5/2-5.html";
 					}
-				}
-
-				i++;
+				}i++;
 			}
 			else{
 				radius1.innerHTML=i;

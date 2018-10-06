@@ -16,5 +16,7 @@ $(document).ready(function(){
 		console.log($(this).index());
 	})
 	console.log($(".user"));
-
+	$("#start").click(function(){
+		window.location.href="../2-6/2-6.html";
+	})
 })

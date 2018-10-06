@@ -11,6 +11,7 @@ window.onload=function(){
 	var range=document.getElementById("range");
 	var left11=document.getElementById("left11");
 	var left22=document.getElementById("left22");
+
 //按钮跳转返回
 	img1.onclick=function(){
 		window.location.href="../2-1/2-1.html";
@@ -36,8 +37,8 @@ window.onload=function(){
 						human.innerHTML=number.value - killer.innerHTML;
 					}
 					btn.onclick=function(){		
-						localStorage.setItem("killer",killer.innerHTML);
-						localStorage.setItem("human",human.innerHTML);
+						localStorage.setItem("killerNum",killer.innerHTML);
+						localStorage.setItem("humanNum",human.innerHTML);
 						window.location.href="../2-4/2-4.html";
 				}
 			}

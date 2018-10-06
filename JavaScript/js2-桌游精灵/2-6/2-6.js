@@ -1,5 +1,9 @@
 $(document).ready(function () {
 	var player=localStorage.getItem("player").split(",");
+	var killerNum=localStorage.getItem("killerNum");
+	var humanNum=localStorage.getItem("humanNum");
+	console.log(killerNum);
+	console.log(humanNum);
 	$("#headerLeft").click(function(){
 		window.location.href="../2-5/2-5.html";
 	})
@@ -16,8 +20,6 @@ $(document).ready(function () {
 	var lastWorld = $("#play_two");
 	var speak = $("#play_three");
 	var vote = $("#play_four");
-	console.log($("#play_one"));
-
 	//设置状态机当前状态,当state(状态)为空时候,从alive开始,当状态为voted时(一个循环结束时),从头开始(alive)
 	var state = localStorage.getItem("state");
 	if (state == null ){
@@ -27,7 +29,7 @@ $(document).ready(function () {
 			state = 'alive';
 		}
 	fsm = new StateMachine({
-		init:"alive",
+		init:state,
 		//状态转变
 		transition:[
 			{name:'kill',form:'alive',to:'dead'},
@@ -37,19 +39,19 @@ $(document).ready(function () {
 		],
 		//各个状态时按键的颜色
 		methods:{
-			onDead:function(){
+			onKill:function(){
 				kill.css("background-color", "#000");
 			},
-			onSpoke:function(){
+			onLasrWorld:function(){
 				kill.css("background-color", "#000");
 				lastWorld.css("background-color", "#000");
 			},
-			onKnown:function(){
+			onSpeak:function(){
 				kill.css("background-color", "#000");
 				lastWorld.css("background-color", "#000");
 				speak.css("background-color", "#000");
 			},
-			onVoted:function(){
+			onVote:function(){
 				kill.css("background-color", "#000");
 				lastWorld.css("background-color", "#000");
 				speak.css("background-color", "#000");
@@ -58,14 +60,16 @@ $(document).ready(function () {
 		}
 
 	})
-
 	//点击第一个杀人按钮时触发的事件
-	kill.click(function(){
-		console.log(fsm.state);   
-		if (fsm.state=="alive") {
-			fsm.kill();            //改变当前状态;
-			//window.location.href ="../2-5/2-5.html";
+	
+	kill.click(function(){	
+		console.log(state); 
+		if (fsm.state=='alive') {
+			        //改变当前状态;
+		//	window.location.href ="../2-7/2-7.html";
+			fsm.kill();  
 			localStorage.setItem("state",fsm.state);//存储改变后的状态;
+			
 		}else{
 			alert("请按顺序操作");
 		}
