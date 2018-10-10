@@ -21,6 +21,7 @@ window.onload=function(){
 				number.style.backgroundColor="#fff";
 				killer.innerHTML="&nbsp;";
 				human.innerHTML="&nbsp;";
+				
 				if (reg.test(number.value)!=true) {
 					killer.innerHTML="&nbsp;";
 					human.innerHTML="&nbsp;";
@@ -42,7 +43,7 @@ window.onload=function(){
 						window.location.href="../2-4/2-4.html";
 				}
 			}
-		}
+		} player();
 
 
 //玩家人数输入框
