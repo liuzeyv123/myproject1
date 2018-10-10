@@ -18,7 +18,7 @@ $(document).ready(function (){
 	$(".day1").click(function(){
 		$(this).next(".incident").slideToggle(500);
 	});
-	$(".day1").eq(parseInt(day)-2).click();//前一天的自动收缩;
+	
 	//按钮回到法官日志;
 	$("input").eq(1).click(function(){
 		window.location.href="../2-5/2-5.html";
@@ -43,6 +43,7 @@ $(document).ready(function (){
 	}
 	//如果天数大于1的话,则新创一个第二天,第三天等等的台本框
 	if (day>1) {
+		$(".day1").eq(parseInt(day)-2).click();//前一天的自动收缩;
 		$(".container").append($(".day1").clone(true));
 		$(".container").append($(".incident").clone(true));
 	}
