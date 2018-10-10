@@ -18,7 +18,7 @@ $(document).ready(function (){
 	$(".day1").click(function(){
 		$(this).next(".incident").slideToggle(500);
 	});
-
+	$(".day1").eq(parseInt(day)-2).click();//前一天的自动收缩;
 	//按钮回到法官日志;
 	$("input").eq(1).click(function(){
 		window.location.href="../2-5/2-5.html";
@@ -41,6 +41,12 @@ $(document).ready(function (){
 		sessionStorage.setItem('day',day);
 		sessionStorage.setItem('state',start)
 	}
+	//如果天数大于1的话,则新创一个第二天,第三天等等的台本框
+	if (day>1) {
+		$(".container").append($(".day1").clone(true));
+		$(".container").append($(".incident").clone(true));
+	}
+	//修改每一个台本框的'第一天''第二天........
 	for(var i=0;i<parseInt(day);i++){
 		$(".day1").eq(i).html("第"+(i+1)+"天");
 	}
@@ -98,7 +104,7 @@ $(document).ready(function (){
 	}
 	//点击第一个杀人按钮时触发的事件
 	console.log(fsm.state);
-	$('.container').eq(parseInt(day)-1).find(kill).click(function(){	
+	kill.eq(parseInt(day)-1).click(function(){	
 		console.log(fsm.state);
 		if (fsm.state=='alive') {
 			        //改变当前状态;
@@ -142,14 +148,13 @@ $(document).ready(function (){
 			window.location.href ="../2-7/2-7.html";
 			sessionStorage.setItem("inner",2);
 			sessionStorage.setItem("state",fsm.state);
-			$(".container").append($(".day1").clone(true));
-			$(".container").append($(".incident").clone(true));
+			
 		}else{
 			alert("请按顺序操作");
 		}
 	});
-
-//内容增添//===============================================================
+	
+//根据死的人不同,从2-7传回不同的z和y值,从而进行内容添加//===============================================================
 	if (z==1){
 		kill.after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead)+1)+'号玩家,身份是'+player[dead]+'</p>');	
 	}else if (z==2){
@@ -159,114 +164,3 @@ $(document).ready(function (){
 		vote.after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead1)+1)+'号玩家,身份是'+player[dead1]+'</p>');
 	}
 });
-//以下皆为废案========暂存
-// var fsm = new StateMachine({
-// 	init:state,
-// 	transition:[
-// 			{name:'play_one',form:'start',to:'night'},
-// 			{name:'play_two',form:'night',to:'told'},
-// 			{name:'play_three',form:'told',to:'speakEnd'},
-// 			{name:'play_four',foem:'speakEnd',to:'voted'}
-// 	],
-
-
-// 	methods:{
-// 		onPlay_one:function(){
-// 			$(".play_one").css({backgroundColor:"#2375af"});
-// 			$(".sanjiao").eq(0).css({borderRightColor:"#2375af"});	
-// 		},
-// 		onPlay_two:function(){
-// 			$(".play_two").css({backgroundColor:"#000"});
-// 			$(".sanjiao").eq(1).css({borderRightColor:"#000"});
-// 			alert("请死者发表遗言");
-// 		},
-// 		onPlay_three:function(){
-// 			$(".play_three").css({backgroundColor:"#000"});
-// 			$(".sanjiao").eq(2).css({borderRightColor:"#000"});
-// 			alert("请玩家依次发言");
-// 		},
-// 		onPlay_four:function(){
-// 			$(".play_four").css({backgroundColor:"#000"});
-// 			$(".sanjiao").eq(3).css({borderRightColor:"#000"});	
-// 		}
-// 	}
-// });
-//  switch (fsm.state){
-//         case "night":
-//             fsm.onPlay_one();
-//             break;
-//         case "told":
-//             fsm.onPlay_one();
-//             fsm.onPlay_two();
-//             break;
-//         case "speakEnd":
-//             fsm.onPlay_one();
-//             fsm.onPlay_two();
-//            	fsm.onPlay_three();
-//             break;
-//         case "voted":
-//             fsm.onPlay_one();
-//             fsm.onPlay_two();
-//            	fsm.onPlay_three();
-//            	fsm.onPlay_four();    
-         
-// 	}
-
-	////////////////////////////////////////////////////////////////////////////////////////////
-	///
-
-// $('.play_one').click(function(){
-// 	fsm.killer();
-// })
-// $('.play_two').click(function(){
-// 	fsm.lastWorld();
-// })
-// $('.play_three').click(function(){
-// 	fsm.speak();
-// })
-// $('.play_four').click(function(){
-// 	fsm.vote();
-// })
-
-
-
-
-
-// 	$(".play_one").on("click",function(){
-// 		$(this).css("background-color","#000");
-// 		$(".sanjiao").eq(0).css("border-right-color","#000");
-// 		// window.location.href="";
-// 	})
-
-// 	//2
-// 	$(".play_two").on("click",function(){
-	
-// 		if ($(".play_one").css("background-color")=="rgb(0, 0, 0)" && $(".play_two").css("background-color")!=="rgb(0, 0, 0)"){
-// 			$(this).css("background-color","#000");
-// 			$(".sanjiao").eq(1).css("border-right-color","#000");
-// 			alert("请死者发表遗言");
-// 		}else{
-// 			alert("请按照游戏步骤依次进行");
-// 		}
-// 	})
-// 	//3
-// 	$(".play_three").on("click",function(){	
-// 		if ($(".play_two").css("background-color")=="rgb(0, 0, 0)" && $(".play_three").css("background-color")!=="rgb(0, 0, 0)") {
-// 			$(this).css("background-color","#000");
-// 			$(".sanjiao").eq(2).css("border-right-color","#000");
-// 			alert("请玩家依次发言");
-// 		}else{
-// 			alert("请按照游戏步骤依次进行");
-// 		}
-// 	})
-// 	//4
-// 	$(".play_four").on("click",function(){
-// 		if ($(".play_three").css("background-color")=="rgb(0, 0, 0)" && $(".play_four").css("background-color")!=="rgb(0, 0, 0)") {
-// 			$(this).css("background-color","#000");
-// 			$(".sanjiao").eq(3).css("border-right-color","#000");
-// 			//window.location.href="";
-// 		}else{
-// 			alert("请按照游戏步骤依次进行");
-// 		}
-// 	})
-// })
