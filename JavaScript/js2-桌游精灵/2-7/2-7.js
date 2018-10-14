@@ -26,8 +26,6 @@ $(document).ready(function(){
 	for(i=0;i<=death.length;i++){
 		$(".user1").eq(death[i]).css("background-color","rgb(131, 176, 154)");
 	}
-	//点击出刀
-
 	//点击下一步按钮后,判断玩家身份,决定是alert还是改变颜色(杀死)
 	var xmx=sessionStorage.getItem("xmx");
 	if (xmx==null){
@@ -97,6 +95,8 @@ $(document).ready(function(){
 		$("#start").click(function(){	
 			if($(".user1").eq(dead1).css("background-color")=="rgb(131, 176, 154)"){
 				alert("该玩家已死亡");
+			}else if(dead1==null){
+				alert("请选择被投票处决的玩家");
 			}else{
 				$(".user1").eq(dead1).css("background-color","rgb(131, 176, 154)");
 				//存储死亡玩家的index数组(目的是让其刷新页面后不会重置)

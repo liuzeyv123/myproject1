@@ -8,10 +8,12 @@ $(document).ready(function(){
 		sessionStorage.clear();
 		window.location.href="../2-3/2-3.html";
 	})
-
-	for(var j=0;j<death.length;j++){
-		$(".user1").eq(death[j]).css('background','#83b09a');	
+	if(death!==null){
+			for(var j=0;j<death.length;j++){
+			$(".user1").eq(death[j]).css('background','#83b09a');	
+		}
 	}
+	
 
 	for(var i=0 ;i<player.length;i++){
 		$(".user").eq(i).show();
