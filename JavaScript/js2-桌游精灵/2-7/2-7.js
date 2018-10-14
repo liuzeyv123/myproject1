@@ -53,9 +53,12 @@ $(document).ready(function(){
 			}else if($(".user1").eq(dead).css("background-color")=="rgb(131, 176, 154)"){
 				alert("该玩家已死亡");
 			}else if(dead==null){
+				death.push("live");
 				window.z=2;
 				sessionStorage.setItem("z",z);
 				window.location.href="../2-6/2-6.html";
+				death=JSON.stringify(death);
+				sessionStorage.setItem("death",death);
 			}else{
 				$(".user1").eq(dead).css("background-color","rgb(131, 176, 154)");
 				//存储死亡玩家的index数组(目的是让其刷新页面后不会重置)
@@ -67,8 +70,8 @@ $(document).ready(function(){
 				sessionStorage.setItem("dead",dead);
 				
 				if (xmx==humanNum){
-					alert("杀手胜利");
-					//window.location.href="../2-8/2-8.html";
+					
+					window.location.href="../2-9/2-9.html";
 				}else{
 					window.location.href="../2-6/2-6.html";
 				}
@@ -79,6 +82,10 @@ $(document).ready(function(){
 		})
 	}
 	if (inner==2){
+		$("span").html("&nbsp;&nbsp;&nbsp;请选择被投票处决的玩家");
+		$(".foot").html("点击玩家头像，标记被投票处决的玩家");
+		$("#start").html("决定处决该玩家");
+
 		$(".hover").hide();
 		window.dead1=null;
 		$(".user").click(function(){
@@ -106,16 +113,17 @@ $(document).ready(function(){
 				sessionStorage.setItem("dead1",dead1);
 				
 				if (xmx==humanNum){
-					alert("杀手胜利");
-					//window.location.href="../2-8/2-8.html";
+					
+					window.location.href="../2-9/2-9.html";
 				}else if(omo==killerNum){
-					alert("平民胜利");
-					//window.location.href="../2-8/2-8.html";	
-				}
+				
+					window.location.href="../2-8/2-8.html";	
+				}else{
 				//传递一个参数x,click时z=1,在2-6中设置,if(z==1){........玩家身份....}
-				window.y=1;
-				sessionStorage.setItem('y',y);
-				window.location.href="../2-6/2-6.html";
+					window.y=1;
+					sessionStorage.setItem('y',y);
+					window.location.href="../2-6/2-6.html";
+				}
 			}
 		})
 	}

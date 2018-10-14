@@ -1,0 +1,136 @@
+*{margin:0;padding:0;}
+.header{
+	width: 100%;
+	height: 60px;
+	border-bottom: 1px solid #74d4eb;
+	background-color: #29bde0;
+	text-align: center;
+	color:#FFF;
+	font-size: 25px;
+	line-height: 60px;
+	position: fixed;
+	top:0;
+	z-index: 2;
+}
+.img1 {
+    width: 51px; height: 42px;
+    background: url('css_sprites.png') -10px -235px;
+    transform: scale(0.8);
+    float: left;
+    position: relative;
+    cursor: pointer;
+    top:9px;
+    left:10px;
+}
+.img2{
+    width: 51px; height: 40px;
+    background: url('css_sprites.png') -81px -235px;
+    transform: scale(0.8);
+    float: right;
+    position: relative;
+    top:10px;
+    right: 10px;
+}
+.container{
+	width: 100%;
+	background-color: #29bde0;
+	padding-top: 60px;
+	margin-bottom: 80px;
+}
+.img3{
+    width: 351px; height: 205px;
+    background: url('css_sprites.png') -10px -10px;
+    transform: scale(0.7);
+   	margin: -20px auto;
+   	z-index: 1;
+}
+.text1{
+	width: 80%;
+	max-width:600px;
+	height:120px;
+	margin:0 auto;
+	font-size:24px;
+	font-weight: bold;
+	color: #ffc865;
+}
+.text2{
+	width: 80%;
+	max-width:600px;
+	height:60px;
+	margin:0 auto;
+	font-size:16px;
+	color: #fff;
+}
+ul{
+	list-style: none;
+	line-height: 22px;
+}
+.day{
+	width:100%;
+	height:100px;
+	background-color: #FFF;
+	border-bottom: 1px solid #ddd;
+}
+.in{
+	width:80%;
+	max-width:600px; 
+	height: 120px;
+	margin: 0 auto;
+}
+.days{
+	float:left;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 5px 0;
+}
+.time{
+	float:right;
+	font-size: 16px;
+	margin: 10px 0;
+	color: #c7c7c7;
+}
+.in>ul{
+	font-size: 18px;
+	line-height: 25px;
+	color: #a6a6a6;
+	clear:both;
+}
+.footer{
+	width: 100%;
+	height:80px;
+	background-color: #29bde0;
+	opacity: 0.5;
+	display: flex;
+	position: fixed;
+	align-items:center;
+	justify-content: space-around;
+	bottom: 0;
+}
+.left{
+	width: 42%;
+	height: 50px;
+	background-color:#f66f6f; 
+	font-size: 20px;
+	color: #FFF;
+	border:none;
+	border-radius: 8px;
+	outline: none;
+	position: fixed;
+	bottom: 15px;
+	left: 5%;
+	cursor: pointer;
+}
+.right{
+	width: 42%;
+	height: 50px;
+	background-color:#fbb435;
+	font-size: 20px;
+	color:#FFF;	
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	position: fixed;
+	bottom: 15px;
+	right: 5%;
+	cursor: pointer;
+}

@@ -4,14 +4,16 @@ $(document).ready(function (){
 	var humanNum=localStorage.getItem("humanNum");
 	var dead=sessionStorage.getItem("dead");
 	var dead1=sessionStorage.getItem("dead1");
+	var death=JSON.parse(sessionStorage.getItem("death"));
 	var day=sessionStorage.getItem('day');
 	var z=sessionStorage.getItem("z");
 	var y=sessionStorage.getItem("y");
 	var start=sessionStorage.getItem("state");
-	console.log(killerNum);
-	console.log(humanNum);
+	console.log("killerNum="+killerNum);
+	console.log("humanNum="+humanNum);
+	console.log(death);
 	$("#headerLeft").click(function(){
-		sessionStorage.clear("state");
+		sessionStorage.clear();
 		window.location.href="../2-1/2-1.html";
 	});
 	//点击隐藏第一天,第二天.....的具体内容	
@@ -28,6 +30,7 @@ $(document).ready(function (){
 	var lastWorld = $(".play_two");
 	var speak = $(".play_three");
 	var vote = $(".play_four");
+	console.log(kill);
 	
 	//设置状态机当前状态,当state(状态)为空时候,从alive开始,当状态为voted时(一个循环结束时),从头开始(alive)
 	if (start==null) {
@@ -42,16 +45,48 @@ $(document).ready(function (){
 		sessionStorage.setItem('state',start)
 	}
 	//如果天数大于1的话,则新创一个第二天,第三天等等的台本框
-	if (day>1) {
-		$(".day1").eq(parseInt(day)-2).click();//前一天的自动收缩;
-		$(".container").append($(".day1").clone(true));
-		$(".container").append($(".incident").clone(true));
+	if (day>1){  //从第二天开始,为前几天的添加被杀信息
+		for(var j=1;j<parseInt(day);j++){	
+	 		$(".container").append($(".day1").eq(0).clone(true));
+	 		$(".container").append($(".incident").eq(0).clone(true));
+		}
+		for(var k=0;k<death.length;k++){	
+			if (k%2==0 || k==0){
+				if(death[k]!=="live"){
+			 		$('.play_one').eq(k/2).after('<p class="killInfo">'+'被杀死的是'+(death[k]+1)+'号玩家,身份是'+player[death[k]]+'</p>');
+			 	}else{
+		 			$('.play_one').eq(k/2).after('<p class="killInfo">'+'今晚无人死亡'+'</p>');
+				}
+			}else{
+				$('.play_four').eq((k-1)/2).after('<p class="killInfo">'+'被杀死的是'+(death[k]+1)+'号玩家,身份是'+player[death[k]]+'</p>');
+			}
+		}
 	}
+	
 	//修改每一个台本框的'第一天''第二天........
 	for(var i=0;i<parseInt(day);i++){
 		$(".day1").eq(i).html("第"+(i+1)+"天");
 	}
 	console.log(day);
+	for(var i=0;i<parseInt(day)-1;i++){
+		$(".incident").eq(i).hide();
+	}
+	function killText(){
+		if (day==1) {
+			if (z==1){
+				$('.play_one').eq(parseInt(day)-1).after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead)+1)+'号玩家,身份是'+player[dead]+'</p>');	
+			}else if (z==2){
+				$('.play_one').eq(parseInt(day)-1).after('<p class="killInfo">'+'今晚无人死亡'+'</p>');
+			}
+		}
+	}
+	function voteText(){
+		if (day==1) {
+			if (y==1) {
+				$('.play_four').eq(parseInt(day)-1).after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead1)+1)+'号玩家,身份是'+player[dead1]+'</p>');
+			}
+		}
+	};
 
 	var fsm = new StateMachine({
 		init:start,
@@ -65,20 +100,20 @@ $(document).ready(function (){
 		//各个状态时按键的颜色
 		methods:{
 			onKill:function(){
-				kill.eq(parseInt(day)-1).css("background-color", "#000");
-				$(".sanjiao").eq(0).css("border-right-color","#000");
+				$(".play_one").eq(parseInt(day)-1).css("background-color", "#000");
+				$(".play_one").eq(parseInt(day)-1).find($(".sanjiao")).css("border-right-color","#000");
 			},
 			onLastWorld:function(){
-				lastWorld.eq(parseInt(day)-1).css("background-color", "#000");
-				$(".sanjiao").eq(1).css("border-right-color","#000");
+				$(".play_two").eq(parseInt(day)-1).css("background-color", "#000");
+				$(".play_two").eq(parseInt(day)-1).find($(".sanjiao")).css("border-right-color","#000");
 			},
 			onSpeak:function(){
-				speak.eq(parseInt(day)-1).css("background-color", "#000");
-				$(".sanjiao").eq(2).css("border-right-color","#000");
+				$(".play_three").eq(parseInt(day)-1).css("background-color", "#000");
+				$(".play_three").eq(parseInt(day)-1).find($(".sanjiao")).css("border-right-color","#000");
 			},
 			onVote:function(){
-				vote.eq(parseInt(day)-1).css("background-color", "#000");
-				$(".sanjiao").eq(3).css("border-right-color","#000");
+				$(".play_four").eq(parseInt(day)-1).css("background-color", "#000");
+				$(".play_four").eq(parseInt(day)-1).find($(".sanjiao")).css("border-right-color","#000");
 			}
 		}
 	});
@@ -86,6 +121,7 @@ $(document).ready(function (){
 	switch(fsm.state){
 		case "dead":
 			fsm.onKill();
+			killText();
 			break;
 		case "spoke":
 			fsm.onKill();
@@ -101,17 +137,18 @@ $(document).ready(function (){
 			fsm.onLastWorld();
 			fsm.onSpeak();
 			fsm.onVote();
+			killText();
+			voteText();
 			break;
 	}
 	//点击第一个杀人按钮时触发的事件
 	console.log(fsm.state);
-	kill.eq(parseInt(day)-1).click(function(){	
+	$('.play_one').eq(parseInt(day)-1).click(function(){	
 		console.log(fsm.state);
 		if (fsm.state=='alive') {
-			        //改变当前状态;
+		//改变当前状态;
 			window.location.href ="../2-7/2-7.html";
-			sessionStorage.setItem("inner",1);
-			
+			sessionStorage.setItem("inner",1);	
 			fsm.kill();  
 			sessionStorage.setItem("state",fsm.state);//存储改变后的状态;			
 		}else{
@@ -119,7 +156,7 @@ $(document).ready(function (){
 		}
 	});
 	//点击第二个遗言按钮时触发的事件
-	lastWorld.eq(parseInt(day)-1).click(function(){
+	$('.play_two').eq(parseInt(day)-1).click(function(){
 		console.log(fsm.state);
 		if (fsm.state=='dead'){
 			alert("请死者亮明身份并且发表遗言");
@@ -130,7 +167,7 @@ $(document).ready(function (){
 		}	
 	});
 	//点击第三个讨论按钮时触发的事件
-	speak.eq(parseInt(day)-1).click(function(){
+	$('.play_three').eq(parseInt(day)-1).click(function(){
 		console.log(fsm.state);
 		if (fsm.state=='spoke') {
 			alert("请活着的玩家依次发言");
@@ -141,7 +178,7 @@ $(document).ready(function (){
 		}
 	});
 	//点击第四个投票按钮时触发的事件
-	vote.eq(parseInt(day)-1).click(function(){
+	$('.play_four').eq(parseInt(day)-1).click(function(){
 		console.log(fsm.state);
 		if (fsm.state=='known') {
 			fsm.vote();
@@ -154,14 +191,4 @@ $(document).ready(function (){
 			alert("请按顺序操作");
 		}
 	});
-	
-//根据死的人不同,从2-7传回不同的z和y值,从而进行内容添加//===============================================================
-	if (z==1){
-		kill.after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead)+1)+'号玩家,身份是'+player[dead]+'</p>');	
-	}else if (z==2){
-		kill.after('<p class="killInfo">'+'今晚无人死亡'+'</p>');
-	}
-	if (y==1) {
-		vote.after('<p class="killInfo">'+'被杀死的是'+(parseInt(dead1)+1)+'号玩家,身份是'+player[dead1]+'</p>');
-	}
 });
