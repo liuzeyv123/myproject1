@@ -25,6 +25,12 @@ $(document).ready(function (){
 	$("input").eq(1).click(function(){
 		window.location.href="../2-5/2-5.html";
 	});
+	$("input").eq(0).click(function(){
+		var cof=confirm("确定结束游戏,返回开始界面?");
+		if(cof==true){
+			window.location.href="../2-1/2-1.html";
+		}
+	})
 	//有限状态机
 	var kill = $(".play_one");
 	var lastWorld = $(".play_two");

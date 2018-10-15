@@ -48,7 +48,7 @@ $(document).ready(function(){
 		$("#start").click(function(){
 			if (player[dead]=="杀手") {
 				alert("请勿伤害队友");		
-			}else if($(".user1").eq(dead).css("background-color")=="rgb(131, 176, 154)"){
+			}else if(dead!==null && $(".user1").eq(dead).css("background-color")=="rgb(131, 176, 154)"){
 				alert("该玩家已死亡");
 			}else if(dead==null){
 				death.push("live");
@@ -93,7 +93,7 @@ $(document).ready(function(){
 			console.log(player[dead1]);
 		})
 		$("#start").click(function(){	
-			if($(".user1").eq(dead1).css("background-color")=="rgb(131, 176, 154)"){
+			if(dead1!==null && $(".user1").eq(dead1).css("background-color")=="rgb(131, 176, 154)"){
 				alert("该玩家已死亡");
 			}else if(dead1==null){
 				alert("请选择被投票处决的玩家");

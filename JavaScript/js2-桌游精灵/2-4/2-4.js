@@ -56,7 +56,8 @@ player.sort(function(a,b){return Math.random()>0.5?-1:1;});
 				content2.style.display="block";
 				text.innerHTML="你的身份是"+player[i-2];
 				if(i==parseInt(killer)+parseInt(human)+1){
-					btn.value="请传给裁判";	
+					radius1.innerHTML="法";
+					btn.value="请传给法官";	
 				}
 
 			}
