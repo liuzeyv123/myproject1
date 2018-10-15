@@ -23,7 +23,7 @@ $(document).ready(function(){
 	$('.text1').html('本轮游戏共经历了'+day+'个晚上');
 	$('.text2').html('本次游戏有杀手'+killerNum+'人'+'<br/>'+'本次游戏有平民'+humanNum+'人')
 	if(day>1){
-		for(var k=1;k<=day;k++){
+		for(var k=1;k<day;k++){
 			$('.container').append($('.day').eq(0).clone());
 		}
 	}

@@ -43,7 +43,7 @@ player.sort(function(a,b){return Math.random()>0.5?-1:1;});
 				content2.style.display="none";
 
 				if(i==parseInt(killer)+parseInt(human)+1){
-					btn.value="请裁判开始游戏";	
+					btn.value="请法官开始游戏";	
 					btn.onclick=function(){
 						window.location.href="../2-5/2-5.html";
 					}
