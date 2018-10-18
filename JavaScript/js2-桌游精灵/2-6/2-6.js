@@ -56,6 +56,17 @@ $(document).ready(function (){
 	 		$(".container").append($(".day1").eq(0).clone(true));
 	 		$(".container").append($(".incident").eq(0).clone(true));
 		}
+		//改变前几天的颜色
+		for(var m=1;m<parseInt(day);m++){
+			$(".play_one").eq(m-1).css("background-color", "#000");
+			$(".play_one").eq(m-1).find($(".sanjiao")).css("border-right-color","#000");
+			$(".play_two").eq(m-1).css("background-color", "#000");
+			$(".play_two").eq(m-1).find($(".sanjiao")).css("border-right-color","#000");
+			$(".play_three").eq(m-1).css("background-color", "#000");
+			$(".play_three").eq(m-1).find($(".sanjiao")).css("border-right-color","#000");
+			$(".play_four").eq(m-1).css("background-color", "#000");
+			$(".play_four").eq(m-1).find($(".sanjiao")).css("border-right-color","#000");
+		}
 		for(var k=0;k<death.length;k++){	
 			if (k%2==0 || k==0){
 				if(death[k]!=="live"){
