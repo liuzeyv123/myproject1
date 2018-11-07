@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homepage</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="headpage.css">
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular.min.js"></script>
+	<script src="https://cdn.bootcss.com/angular.js/1.7.0/angular-route.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="myCtrl">
+	<div class="top">
+		<div class="left">网站后台管理系统</div>
+		<div class="right">
+			<div class="user text1">管理员</div>
+				<span class="vertical"></span>
+			<div class="name text1">admin</div>
+				<span class="vertical"></span>
+			<div class="out text1">注销</div>
+		</div>		
+	</div>
+
+	<div class="main">
+		<div class="left">
+			<ul class="ulfirst">
+				<li ng-click="show1()">后台管理<span>{{icon1}}</span></li>
+				<ul class="ulsecond" ng-show="var1">
+					<li>模块管理</li>
+					<li>用户管理</li>
+					<li>密码修改</li>
+					<li>账户管理</li>
+				</ul>
+				<li ng-click="show2()">信息管理<span>{{icon2}}</span></li>
+				<ul class="ulsecond" ng-show="var2">
+					<li>公司列表</li>
+					<li>职位列表</li>
+				</ul>
+				<li ng-click="show3()">内容管理<span>{{icon3}}</span></li>
+				<ul class="ulsecond" ng-show="var3">
+					<a href="#!/Article"><li>Article列表</li></a>
+				</ul>
+			</ul>
+		</div>
+		<div class="right" ng-view></div>
+	</div>
+	<script>
+		var app=angular.module("app1",["ngRoute"]);
+		app.config(function($routeProvider){
+			$routeProvider
+			.when("/Article",{
+				templateUrl:"Article.html"		
+			})
+			.otherwise({
+				template:"Welcome!"
+			})
+		});
+		app.controller("myCtrl",function($scope){
+			$scope.var1=false;
+			$scope.var2=false;
+			$scope.var3=false;
+			$scope.icon1="<";
+			$scope.icon2="<";
+			$scope.icon3="<";
+			$scope.show1=function(){
+				if ($scope.var1==false) {
+					$scope.var1=true;
+					$scope.icon1="v";
+				}else{
+					$scope.var1=false;
+					$scope.icon1="<";
+				}
+				
+			}
+			$scope.show2=function(){
+				if ($scope.var2==false) {
+					$scope.var2=true;
+					$scope.icon2="v";
+				}else{
+					$scope.var2=false;
+					$scope.icon2="<";
+				}
+				
+			}
+			$scope.show3=function(){
+				if ($scope.var3==false) {
+					$scope.var3=true;
+					$scope.icon3="v";
+				}else{
+					$scope.var3=false;
+					$scope.icon3="<";
+				}
+				
+			}
+		})
+	</script>
+</body>
+</html>
