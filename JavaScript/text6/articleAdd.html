@@ -1,0 +1,54 @@
+<div class="container-fluid" style="margin-top: 20px;" ng-controller="articleAddCtrl">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<b>新增Article</b>
+		</div>
+		<div class="panel-body">
+			<form class="form-horizontal">
+
+				<div class="form-group">
+					<label class="col-md-2  control-label">类型</label>
+					<div class="col-md-3">
+						<select class="form-control" ng-model='nowType'>	
+							<option value="" ng-selected=true>请选择</option>
+							<option  ng-repeat="x in type"  value="{{x.value}}">{{x.name}}</option>
+						</select>
+					</div>
+
+					<div ng-show='nowType == 3'>
+						<label class="col-md-2  control-label">行业</label>
+						<div class="col-md-3">
+							<select class="form-control" ng-model='nowIndustry'>
+								<option value="" ng-selected=true>请选择</option>
+								<option  ng-repeat="x in industry" value="{{x.value}}">{{x.name}}</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-2  control-label">标题名称</label>
+					<div class="col-md-8">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-md-2  control-label">跳转链接</label>
+					<div class="col-md-8">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2  control-label">说明</label>
+					<div class="col-md-8">
+						<input type="text" class="form-control">
+					</div>
+				</div>
+				<div class="form-group"></div>
+				<div class="form-group"></div>
+				<div class="form-group"></div>
+			</form>
+		</div>
+	</div>
+</div>

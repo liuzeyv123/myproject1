@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head ng-app="myapp">
+<head >
 	<title></title>
 	<meta charset="utf-8">
 	<script src="angular-1.7.5/angular.js"></script>
 	<script src="angular-1.7.5/angular-route.js"></script>
 </head>
-<body ng-controller="myctrl">
+<body ng-app="myapp" ng-controller="myctrl">
 	<h1>使用AngularJS的路由模块</h1>
 	<a href="#!/two">two</a>
 	<a href="#!/three">three</a>
 	<a href="#!/four">four</a>
 	<div ng-view></div>
+
+	<script>
+		angular.module('myapp',['ng','ngRoute'])
+		.config(function($routeProvider){
+			$routeProvider
+			.when('/two',{
+				templateUrl:'two.html',
+				controller:'twoctrl'
+			})
+			.when('/three',{
+				templateUrl:'three.html',
+				controller:'threectrl'
+			})
+			.when('/four',{
+				templateUrl:'four.html',
+				controller:'fourctrl'
+			})
+			.otherwise({
+				redirectTo:'/two'
+			});
+		}).controller('myctrl',function($scope,$http){
+		}).controller('twoctrl',function($scope,$http){
+			$scope.nerb='002';
+		}).controller('threectrl',function($scope,$http){
+			$scope.nerb='003';
+		}).controller('fourctrl',function($scope,$http){
+			$scope.nerb='004';
+		})
+	</script>
 </body>
-<script>
-	var app=angular.module('myapp',['ng','ngRoute'])
-	app.controller('myctrl',function($scope){
-	}).controller('twoctrl',function($scope){
-		$scope.nerb='002';
-	}).controller('threectrl',function($scope){
-		$scope.nerb='003';
-	}).controller('fourctrl',function($scope){
-		$scope.nerb='004';
-	}).config(function($routeProvider){
-		$routeProvider
-		.when('/two',{
-			templateUrl:'two.html',
-			controller:'twoctrl'
-		})
-		.when('/three',{
-			templateUrl:'three.html',
-			controller:'threectrl'
-		})
-		.when('/four',{
-			templateUrl:'four.html',
-			controller:'fourctrl'
-		})
-		.otherwise({
-			redirectTo:'/two'
-		});
-	})
-</script>
 </html>

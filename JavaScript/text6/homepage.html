@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="css/headpage.css">
+
+<div class="headpage" ng-controller="homepageCtrl">
+	<div class="top">
+		<div class="left">网站后台管理系统</div>
+		<div class="right">
+			<div class="user text1">管理员</div>
+				<span class="vertical"></span>
+			<div class="name text1">admin</div>
+				<span class="vertical"></span>
+			<div class="out text1" ng-click="logout()">注销</div>
+		</div>		
+	</div>
+
+	<div class="main"  >
+		<div class="left" >
+			<ul class="ulfirst">
+				<li ng-click="show1()">后台管理<span>{{icon1}}</span></li>
+				<ul class="ulsecond" ng-show="var1">
+					<li>模块管理</li>
+					<li>用户管理</li>
+					<li>密码修改</li>
+					<li>账户管理</li>
+				</ul>
+				<li ng-click="show2()">信息管理<span>{{icon2}}</span></li>
+				<ul class="ulsecond" ng-show="var2">
+					<li>公司列表</li>
+					<li>职位列表</li>
+				</ul>
+				<li ng-click="show3()">内容管理<span>{{icon3}}</span></li>
+				<ul class="ulsecond" ng-show="var3">
+					<li ui-sref='.Article'><a href="" style="text-decoration:none;color:#fff;">Article列表</a></li>
+				</ul>
+			</ul>
+		</div>
+		<div class="right" ui-view="">
+			<h1>&emsp;欢迎使用</h1>
+		</div>
+	</div>
+</div>

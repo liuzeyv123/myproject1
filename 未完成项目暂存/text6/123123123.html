@@ -9,9 +9,46 @@
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="angular-1.7.5/angular.js"></script>
 	<script src="angular-1.7.5/angular-route.js"></script>
-		<script>
-		var app=angular.module("app1",["ngRoute"]);
-		app.config(function($routeProvider){
+</head>
+<body ng-app="app1" ng-controller="myCtrl">
+
+	<div class="top">
+		<div class="left">网站后台管理系统</div>
+		<div class="right">
+			<div class="user text1">管理员</div>
+				<span class="vertical"></span>
+			<div class="name text1">admin</div>
+				<span class="vertical"></span>
+			<div class="out text1">注销</div>
+		</div>		
+	</div>
+
+	<div class="main">
+		<div class="left">
+			<ul class="ulfirst">
+				<li ng-click="show1()">后台管理<span>{{icon1}}</span></li>
+				<ul class="ulsecond" ng-show="var1">
+					<li>模块管理</li>
+					<li>用户管理</li>
+					<li>密码修改</li>
+					<li>账户管理</li>
+				</ul>
+				<li ng-click="show2()">信息管理<span>{{icon2}}</span></li>
+				<ul class="ulsecond" ng-show="var2">
+					<li>公司列表</li>
+					<li>职位列表</li>
+				</ul>
+				<li ng-click="show3()">内容管理<span>{{icon3}}</span></li>
+				<ul class="ulsecond" ng-show="var3">
+					<a href="#!/Article"><li>Article列表</li></a>
+				</ul>
+			</ul>
+		</div>
+		<div class="right" ng-view></div>
+	</div>
+	<script>
+		angular.module("app1",["ngRoute"])
+		.config("$routeProvider",function($routeProvider){
 			$routeProvider
 			.when("/Article",{
 				templateUrl:"Article.html"	
@@ -19,8 +56,8 @@
 			.otherwise({
 				template:"Welcome!"
 			})
-		});
-		app.controller("myCtrl",function($scope){
+		})
+		.controller("myCtrl",function($scope){
 			$scope.var1=false;
 			$scope.var2=false;
 			$scope.var3=false;
@@ -59,43 +96,5 @@
 			}
 		})
 	</script>
-</head>
-<body ng-app="app1" ng-controller="myCtrl">
-
-	<div class="top">
-		<div class="left">网站后台管理系统</div>
-		<div class="right">
-			<div class="user text1">管理员</div>
-				<span class="vertical"></span>
-			<div class="name text1">admin</div>
-				<span class="vertical"></span>
-			<div class="out text1">注销</div>
-		</div>		
-	</div>
-
-	<div class="main">
-		<div class="left">
-			<ul class="ulfirst">
-				<li ng-click="show1()">后台管理<span>{{icon1}}</span></li>
-				<ul class="ulsecond" ng-show="var1">
-					<li>模块管理</li>
-					<li>用户管理</li>
-					<li>密码修改</li>
-					<li>账户管理</li>
-				</ul>
-				<li ng-click="show2()">信息管理<span>{{icon2}}</span></li>
-				<ul class="ulsecond" ng-show="var2">
-					<li>公司列表</li>
-					<li>职位列表</li>
-				</ul>
-				<li ng-click="show3()">内容管理<span>{{icon3}}</span></li>
-				<ul class="ulsecond" ng-show="var3">
-					<a href="#!/Article"><li>Article列表</li></a>
-				</ul>
-			</ul>
-		</div>
-		<div class="right" ng-view></div>
-	</div>
-
 </body>
 </html>

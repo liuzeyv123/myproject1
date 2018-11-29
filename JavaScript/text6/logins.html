@@ -1,0 +1,16 @@
+
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<div class="box" ng-controller="loginsCtrl">
+	<div class="title">后台登录</div>
+	<div class="userBox">
+		<img src="image/2.png"/>
+		<input type="text" id="user" placeholder="请输入用户名" maxlength="20" ng-model="userName" autocomplete="off">
+	</div>
+	<div class="passwordBox">
+		<img src="image/1.png"/>
+		<input type="password" id="password" placeholder="请输入密码" maxlength="20" ng-model="passWord" autocomplete="off">
+	</div>
+	<p class='placeholder1'>{{worry}}</p>
+	<button ng-click='loginclk()' class="login">登录</button>
+</div>
+<script type="text/javascript" src="js/logins.js"></script>

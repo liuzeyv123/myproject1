@@ -32,7 +32,8 @@ $(document).ready(function(){
 						console.log(a.message);					
 						console.log(a);
 						if(a.message == "success"){
-	                        location.href = 'http://dev.admin.carrots.ptteng.com';
+	                        
+	                    
 	                    }else{
 	                    	$(".placeholder1").html(a.message);
 	                    }
