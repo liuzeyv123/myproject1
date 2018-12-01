@@ -128,9 +128,9 @@
 						<td>{{x.author}}</td>
 						<td>{{x.status|status1}}</td>
 						<td>
-                            <button ng-click="onoffline()">{{x.status|btn1}}</button>   
-                            <button href="">编辑</button>
-                            <button href="">删除</button>
+                            <button class="btn-transparent" ng-click="onoffline()">{{x.status|btn1}}</button>   
+                            <button class="btn-transparent" href="">编辑</button>
+                            <button class="btn-transparent" ng-click="delete()">删除</button>
                                          
                         </td>
 					</tr>					
@@ -175,7 +175,7 @@
                 <h3 class="modal-title">提示</h3>
             </div>
             <div class="modal-body">
-                <p></p>
+                <p style="color: red;">{{sta()}}</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>

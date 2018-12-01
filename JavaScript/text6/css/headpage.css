@@ -11,8 +11,8 @@ body{
 	
 }
 .headpage>.top .left{
-	width:250px; 
-	min-width: 250px;
+	width:220px; 
+	min-width: 220px;
 	height: 50px;
 	background-color: rgb(35, 42, 58);
 	color: #fff;
@@ -55,8 +55,8 @@ body{
 	
 }
 .headpage>.main .left{
-	width:250px; 
-	min-width: 250px;
+	width:220px; 
+	min-width: 220px;
 	
 	/*height:calc(100vh - 50px);*/
 	background-color: rgb(35, 42, 58);

@@ -105,29 +105,56 @@ app.controller('ArticleCtrl',function($scope,$http,$state,$stateParams){
         	reload:true
 		});
 	}
-	//上线,下线按钮-出现模态框
+	//1======上线,下线按钮-出现模态框
 	$scope.onoffline=function(){
 		var id1=this.x.id;
 		var status1=this.x.status==1 ? status1=2 : status1=1;
+		$scope.sta=function(){
+			switch(status1){
+				case 2:return"下线后模块将不再展示,是否依然要下线?";
+				case 1:return"上线后模块将展示,是否确认上线?";
+			}
+		};
 		$("#modal-onoffline").modal("toggle");
-		//模态框提交确认
+		//模态框提交再确认
 		$scope.yes=function(){
 			$http({
-			method:"put",
-			url:"/carrots-admin-ajax/a/u/article/status",
-			params:{
-				id:id1,
-				status:status1
-			}
+				method:"put",
+				url:"/carrots-admin-ajax/a/u/article/status",
+				params:{
+					id:id1,
+					status:status1
+				}
 			}).then(function(rep2){
 				$state.reload();
 				$("#modal-onoffline").modal("toggle")
 			});
-		}
-		
-			
-			
+		}	
 	};
+	//2=======编辑按钮
+	
+
+
+
+	
+	//3=======删除按钮
+	$scope.delete=function(){
+		var id=this.x.id;
+		$scope.sta=function(){
+			return"删除后将清空该项目一切数据,请再次确认是否删除?"
+		};
+		$("#modal-onoffline").modal("toggle");
+		//模态框提交再确认
+		$scope.yes=function(){
+			$http({
+				method:"delete",
+				url:"/carrots-admin-ajax/a/u/article/"+id
+			}).then(function(rep3){
+				$state.reload();
+				$("#modal-onoffline").modal("toggle")
+			});
+		}	
+	}
 //跳转新增article
 	$scope.add=function(){
 		$state.go('homepage.articleAdd');

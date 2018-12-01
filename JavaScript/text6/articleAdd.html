@@ -1,11 +1,12 @@
-<div class="container-fluid" style="margin-top: 20px;" ng-controller="articleAddCtrl">
+<link rel="stylesheet" type="text/css" href="css/articleAdd.css">
+
+<div class="articleAdd container-fluid" style="margin-top: 20px;" ng-controller="articleAddCtrl">
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<b>新增Article</b>
 		</div>
 		<div class="panel-body">
 			<form class="form-horizontal">
-
 				<div class="form-group">
 					<label class="col-md-2  control-label">类型</label>
 					<div class="col-md-3">
@@ -29,26 +30,62 @@
 				<div class="form-group">
 					<label class="col-md-2  control-label">标题名称</label>
 					<div class="col-md-8">
-						<input type="text" class="form-control">
+						<input type="text" class="form-control" ng-model="title">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="col-md-2  control-label">跳转链接</label>
 					<div class="col-md-8">
-						<input type="text" class="form-control">
+						<input type="text" class="form-control" ng-model="url">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-md-2  control-label">说明</label>
 					<div class="col-md-8">
-						<input type="text" class="form-control">
+						<input type="text" class="form-control" ng-model="content">
 					</div>
 				</div>
-				<div class="form-group"></div>
-				<div class="form-group"></div>
-				<div class="form-group"></div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">配图</label>
+					<div class="col-md-8">
+						<label class="btn btn-success control-label" for="file">上传图片</label>
+						<input ng-hide="true" type="file" id="file" ng-model="file"  nv-file-select="" uploader="uploader">	
+					</div>
+				</div>
+				<!-- <button ng-click="yee()">1111</button> -->
+				<img alt="预览图片" class="col-md-offset-2" src="{{iconUrl}}" id="show" style="max-width:400px;max-height:300px;">
 			</form>
+		</div>
+		<!-- <table class="table">
+			<thead>
+				<tr>
+					<th>图片名</th>
+					<th>文件大小</th>
+					<th>进度</th>
+					<th>上传</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>{{iconname}}</th>
+					<th>{{iconsize}}</th>
+					<th>
+					
+					</th>
+					<th></th>
+					<th>
+						<button class="btn btn-success btn-xs">上传</button>
+						<button class="btn btn-danger btn-xs">放弃</button>
+					</th>
+				</tr>
+			</tbody>
+		</table> -->
+		<div class="panel-footer">
+			<button class="btn btn-success" ng-click="dataup()">立即上线</button>
+			<button class="btn btn-primary" ng-click="datadown()">暂存草稿</button>
+
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-var app=angular.module('myapp1',['ui.router','ui.bootstrap']);
+var app=angular.module('myapp1',['ui.router','ui.bootstrap','angularFileUpload']);
 	app.config(function($stateProvider,$urlRouterProvider){
 		$urlRouterProvider.when('','/logins');//默认页面定向到'/logins'
 		$stateProvider
