@@ -15,7 +15,7 @@ var app=angular.module('myapp1',['ui.router','ui.bootstrap','angularFileUpload']
 			templateUrl:'Article.html'
 		})
 		.state('homepage.articleAdd',{
-			url:'/articleAdd',
+			url:'/articleAdd?id',
 			templateUrl:'articleAdd.html'
 		})
 	});

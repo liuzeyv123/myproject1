@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button @click="move">开始滚动</button>
+		<button @click="stop">停止滚动</button>
+		<button @click="return1">重置</button>
+		<h4 v-html="mag"></h4>
+	</div>
+</body>
+<script>
+	var vm=new Vue({
+		el:'#app',
+		data:{
+			mag:"你好,我叫大大大  ",
+			intervalId:null,
+			mag_return:"你好,我叫大大大  "
+		},
+		methods:{
+			move(){
+				if (this.intervalId==null) {
+					this.intervalId=setInterval(()=>{
+						console.log(this.mag);
+						var start=this.mag.substring(0,1);
+						var end=this.mag.substring(1);
+						this.mag=end+start;
+					},300)
+				}
+
+			},
+			stop(){
+				clearInterval(this.intervalId);
+				this.intervalId=null;
+			},
+			return1(){
+				this.mag=this.mag_return;
+				clearInterval(this.intervalId);
+				this.intervalId=null;
+			}
+		},
+	})
+</script>
+</html>

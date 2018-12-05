@@ -30,17 +30,17 @@ window.onload=function(){
 				else{
 					killer.innerHTML=parseInt(number.value*1/3);
 					human.innerHTML=number.value - killer.innerHTML;
-					if (number.value==15) {
-						killer.innerHTML=4;
-						human.innerHTML=number.value - killer.innerHTML;
-					}else if (number.value==18) {
-						killer.innerHTML=5;
-						human.innerHTML=number.value - killer.innerHTML;
-					}
-					btn.onclick=function(){		
-						localStorage.setItem("killerNum",killer.innerHTML);
-						localStorage.setItem("humanNum",human.innerHTML);
-						window.location.href="../2-4/2-4.html";
+				if (number.value==15) {
+					killer.innerHTML=4;
+					human.innerHTML=number.value - killer.innerHTML;
+				}else if (number.value==18) {
+					killer.innerHTML=5;
+					human.innerHTML=number.value - killer.innerHTML;
+				}
+				btn.onclick=function(){		
+					localStorage.setItem("killerNum",killer.innerHTML);
+					localStorage.setItem("humanNum",human.innerHTML);
+					window.location.href="../2-4/2-4.html";
 				}
 			}
 		} player();

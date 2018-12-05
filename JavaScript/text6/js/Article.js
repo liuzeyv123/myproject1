@@ -105,6 +105,8 @@ app.controller('ArticleCtrl',function($scope,$http,$state,$stateParams){
         	reload:true
 		});
 	}
+
+//======================================================================
 	//1======上线,下线按钮-出现模态框
 	$scope.onoffline=function(){
 		var id1=this.x.id;
@@ -132,7 +134,13 @@ app.controller('ArticleCtrl',function($scope,$http,$state,$stateParams){
 		}	
 	};
 	//2=======编辑按钮
-	
+	$scope.revise=function(){
+		var id=this.x.id;
+		$state.go('homepage.articleAdd',{
+			id:id
+		})
+		
+	}
 
 
 

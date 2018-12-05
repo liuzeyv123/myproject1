@@ -3,15 +3,15 @@
 <div class="articleAdd container-fluid" style="margin-top: 20px;" ng-controller="articleAddCtrl">
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<b>新增Article</b>
+			<b>{{Article_name}}Article</b>
 		</div>
 		<div class="panel-body">
-			<form class="form-horizontal">
+			<form class="form-horizontal" name="myForm">
 				<div class="form-group">
 					<label class="col-md-2  control-label">类型</label>
 					<div class="col-md-3">
 						<select class="form-control" ng-model='nowType'>	
-							<option value="" ng-selected=true>请选择</option>
+							<option value="" ng-selected="true">请选择</option>
 							<option  ng-repeat="x in type"  value="{{x.value}}">{{x.name}}</option>
 						</select>
 					</div>
@@ -20,7 +20,7 @@
 						<label class="col-md-2  control-label">行业</label>
 						<div class="col-md-3">
 							<select class="form-control" ng-model='nowIndustry'>
-								<option value="" ng-selected=true>请选择</option>
+								<option value="" ng-selected="true">请选择</option>
 								<option  ng-repeat="x in industry" value="{{x.value}}">{{x.name}}</option>
 							</select>
 						</div>
@@ -30,8 +30,10 @@
 				<div class="form-group">
 					<label class="col-md-2  control-label">标题名称</label>
 					<div class="col-md-8">
-						<input type="text" class="form-control" ng-model="title">
+						<input type="text" class="form-control" ng-model="title" name="title" required>
+						<span class="col-md-2" ng-show='myForm.title.$error.required' style="color: red;">标题不能为空</span>
 					</div>
+					
 				</div>
 
 				<div class="form-group">
@@ -50,41 +52,39 @@
 					<label class="col-md-2 control-label">配图</label>
 					<div class="col-md-8">
 						<label class="btn btn-success control-label" for="file">上传图片</label>
-						<input ng-hide="true" type="file" id="file" ng-model="file"  nv-file-select="" uploader="uploader">	
+						<input ng-hide="true" type="file" id="file" ng-model="file"  nv-file-select="" uploader="uploader" onchange="angular.element(this).scope().click()">	
 					</div>
 				</div>
 				<!-- <button ng-click="yee()">1111</button> -->
 				<img alt="预览图片" class="col-md-offset-2" src="{{iconUrl}}" id="show" style="max-width:400px;max-height:300px;">
 			</form>
 		</div>
-		<!-- <table class="table">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>图片名</th>
 					<th>文件大小</th>
-					<th>进度</th>
+<!-- 					<th>进度</th>
 					<th>上传</th>
-					<th>操作</th>
+					<th>操作</th> -->
 				</tr>
 			</thead>
-			<tbody>
+			<tbody ng-if="ngif">
 				<tr>
 					<th>{{iconname}}</th>
 					<th>{{iconsize}}</th>
-					<th>
-					
-					</th>
+					<!-- <th></th>
 					<th></th>
 					<th>
 						<button class="btn btn-success btn-xs">上传</button>
 						<button class="btn btn-danger btn-xs">放弃</button>
 					</th>
-				</tr>
+				 --></tr>
 			</tbody>
-		</table> -->
+		</table>
 		<div class="panel-footer">
-			<button class="btn btn-success" ng-click="dataup()">立即上线</button>
-			<button class="btn btn-primary" ng-click="datadown()">暂存草稿</button>
+			<button class="btn btn-success" ng-click="dataup()" ng-disabled="disabledA()">立即上线</button>
+			<button class="btn btn-primary" ng-click="datadown()" ng-disabled="disabledB()">暂存草稿</button>
 
 		</div>
 	</div>

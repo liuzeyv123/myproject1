@@ -1,43 +1,39 @@
 app.controller('articleAddCtrl',function($scope,$http,$state,$stateParams,FileUploader){
-
 	//上传图片预览插件封装
-	function iconview(){  
+	
+	$scope.Article_name="新增";
+	function iconview(){ 
+		$scope.click=function(){
+	 		$scope.ngif="true";
+	 		var file=$("#file").get(0).files[0];
+	 		$scope.file=file;	
+	 		$scope.iconname=$scope.file.name;
+	 		$scope.iconsize=($scope.file.size/1024).toFixed(2)+"kb";	
+	 	} 
 		var uploader = $scope.uploader = new FileUploader();
 	    uploader.onAfterAddingFile = function(fileItem) {
-	      var reader = new FileReader();
-	      reader.addEventListener("load", function (e) {
+	      	var reader = new FileReader();
+	      	
+	      	reader.addEventListener("load", function (e) {
 	        //文件加载完之后，更新angular绑定
-	        $scope.$apply(function(){
-	          $scope.iconUrl = e.target.result;
-	          
-	          var iconurl1=$scope.iconUrl;
-	          console.log(iconurl1);
-	        });
-	      }, false);
-	      reader.readAsDataURL(fileItem._file);
+	          	$scope.iconUrl = e.target.result;
+	          	var iconurl1=$scope.iconUrl;
+	          	$scope.$apply();
+	      	}, false);
+	      	reader.readAsDataURL(fileItem._file);
 	    };
     }iconview();
-    
- 	$scope.click=function(){
- 		$scope.ngif="true";
- 		var file=$("#file").get(0).files[0];
- 		$scope.file=file;
- 		console.log(file);
- 		$scope.iconname=$scope.file.name;
- 		console.log($scope.iconname);
- 		$scope.iconsize=($scope.file.size/1024).toFixed(2)+"kb";
- 		console.log($scope.iconsize);
- 	}
 
-
-
-
-    //上线,暂存按钮
+    //数据上线,暂存按钮
     $scope.dataup=function(){
     	var file=$("#file").get(0).files[0];
-    	var img1=file.name;
-    	console.log(file);
-    	console.log(img1);
+    		console.log(file);
+			console.log($scope.title);
+			console.log($scope.nowType);
+			console.log($scope.nowIndustry);
+			console.log($scope.iconUrl);
+			console.log($scope.content);
+			console.log($scope.url);
     	$http({
     		method:"POST",
     		url:"/carrots-admin-ajax/a/u/article",
@@ -45,24 +41,25 @@ app.controller('articleAddCtrl',function($scope,$http,$state,$stateParams,FileUp
     			title:$scope.title,
     			type:$scope.nowType,
     			status:'1',
-    			img:img1,
+    			img:$scope.iconUrl,
     			content:$scope.content,
     			url:$scope.url,
     			industry:$scope.nowIndustry
     		}
     	}).then(function(rep){
     		$state.go('homepage.Article');
-    		console.log('ok');
-    		console.log(rep);
+    		
     	})	
     }
-     $scope.datadown=function(){
+    $scope.datadown=function(){
     	var file=$("#file").get(0).files[0];
-    	var img1=file.name;
-    	var data=new FormData();
-    	console.log(data);
-    	console.log(file);
-    	console.log(img1);
+    		console.log(file);
+			console.log($scope.title);
+			console.log($scope.nowType);
+			console.log($scope.nowIndustry);
+			console.log($scope.iconUrl);
+			console.log($scope.content);
+			console.log($scope.url);
     	$http({
     		method:"POST",
     		url:"/carrots-admin-ajax/a/u/article",
@@ -70,20 +67,53 @@ app.controller('articleAddCtrl',function($scope,$http,$state,$stateParams,FileUp
     			title:$scope.title,
     			type:$scope.nowType,
     			status:'2',
-    			img:img1,
+    			img:$scope.iconUrl,
     			content:$scope.content,
     			url:$scope.url,
     			industry:$scope.nowIndustry
     		}
     	}).then(function(rep){
     		$state.go('homepage.Article');
-    		console.log('ok');
-    		console.log(rep);
     	})	
     }
+    //编辑按钮进入页面时,进行的id数据获取======================
+    if ($stateParams.id){
+		console.log($stateParams.id);
+		$scope.Article_name="编辑";
+		$http({
+			method:"get",
+			url:"/carrots-admin-ajax/a/article/"+$stateParams.id
+		}).then(function(rep){
+			console.log(rep);
+			
+			$scope.title=rep.data.data.article.title;
+			$scope.nowType=String(rep.data.data.article.type);
+			$scope.nowIndustry=String(rep.data.data.article.industry);
+			$scope.iconUrl=rep.data.data.article.img;
+			$scope.content=rep.data.data.article.content;
+			$scope.url=rep.data.data.article.url;	
+		})
+	}
+	//提交时各向内容不为空
+	$scope.disabledA=function(){
+		if ($scope.title!=undefined&&
+			$scope.nowType!=undefined&&
+			
+			$scope.iconUrl!=undefined&&
+			$scope.content!=undefined&&
+			$scope.url!=undefined) {
+			return false;
+		}else{
+			return true;
+		}
+	}
 
 
 	
+
+
+
+
 $scope.type=[{
 	value:0,
  	name:'首页banner'
@@ -120,9 +150,6 @@ $scope.industry=[{
  	value:6,
  	name:'游戏'
 }];
-
-	
-console.log(file);
 
 })
 
